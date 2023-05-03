@@ -9,12 +9,24 @@ $font: 'Raleway', serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: solid 1px red;
 }
 
 body {
   min-width: 320px;
 }
 
+.logo{
+  color: $blue;
+  font-family: $font;
+  font-size: 32px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.nav-content{
+  
+}
 
 h1{
   color: $blue;

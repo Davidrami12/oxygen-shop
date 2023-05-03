@@ -2,10 +2,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: solid 1px red;
 }
 
 body {
   min-width: 320px;
+}
+
+.logo {
+  color: #08A6E4;
+  font-family: "Raleway", serif;
+  font-size: 32px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 h1 {
