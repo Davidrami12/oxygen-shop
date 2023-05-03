@@ -1,0 +1,18 @@
+$blue: #08A6E4;
+$pink: #FB3B64;
+$green: #55DFB4;
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $green;
+}
+
+h1{
+    color: $blue;
+}

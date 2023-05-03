@@ -1,5 +1,24 @@
 {
   "dependencies": {
-    "http-server": "^14.1.1"
-  }
+    "http-server": "^14.1.1",
+    "node-sass": "^8.0.0"
+  },
+  "name": "oxygen-shop",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davidrami12/oxygen-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davidrami12/oxygen-shop/issues"
+  },
+  "homepage": "https://github.com/Davidrami12/oxygen-shop#readme"
 }
