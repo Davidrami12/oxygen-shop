@@ -1,11 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font: 100% Helvetica, sans-serif;
-  color: #333;
-  background-color: #55DFB4;
+  min-width: 320px;
 }
 
 h1 {
   color: #08A6E4;
+  font-family: "Raleway", serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
