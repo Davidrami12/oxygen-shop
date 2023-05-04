@@ -9,6 +9,8 @@ body {
 }
 
 header {
+  z-index: 1;
+  display: block;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -20,6 +22,8 @@ header {
 .logo {
   color: #08A6E4;
   font-family: "Raleway", serif;
+  font-weight: 300;
+  line-height: 2.3125rem;
   font-size: 2em;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -30,15 +34,18 @@ header {
   display: none;
 }
 
-h1 {
-  font-family: "Raleway", serif;
-  font-size: 35px;
-  text-align: center;
-}
-
 .why-us {
   margin-top: 100px;
   width: 100%;
+}
+
+.why-us h1 {
+  font-family: "Raleway", serif;
+  text-align: center;
+  text-align: center;
+  line-height: 2.5625rem;
+  font-size: 2.1875rem;
+  font-weight: 400;
 }
 
 .why-us p {
@@ -46,33 +53,110 @@ h1 {
   margin-top: 20px;
   font-family: "Open Sans";
   text-align: center;
-  width: 75%;
+  width: 100%;
 }
 
-button {
+.why-us button {
   text-align: center;
   margin: auto;
-  color: white;
+  margin-top: 30px;
   background-color: #08A6E4;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-  border-radius: 40px;
   width: 80%;
   padding: 20px;
   font-family: "Open Sans";
   font-size: 1em;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2.5rem;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.375rem;
+  border: none;
 }
 
-.why-us article p {
+.why-us button:hover {
+  background-color: #159bd0;
+  cursor: pointer;
+}
+
+.why-us-image-container {
+  margin-top: 20px;
+  height: 99vh;
+  background: url(/src/img/Background1-mobile.png) no-repeat;
+  background-size: contain;
+}
+
+/*.why-us-image-container img{
+  background-size: contain;
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+  margin-top: 20px;
+}*/
+.why-us .topics {
+  margin-top: -55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.why-us .topics p {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 300;
   font-size: 30px;
 }
 
-#laptop-image {
-  background-image: url("/src/img/Background1-desktop.png");
-  width: 100%;
-  background-color: red;
+.topic1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.topic1-img {
+  width: 62.71px;
+  height: 62.71px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #FB3B64;
+}
+
+.topic1-img img {
+  position: absolute;
+  width: 2.75rem;
+  height: 3.25rem;
+  left: 2rem;
+  top: 3px;
+}
+
+.paragraph1 {
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+  letter-spacing: 5.96px;
+  color: #000000;
+}
+
+.paragraph2 {
+  width: 95px;
+  height: 1.25rem;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.25rem;
+  text-align: center;
+  color: #A5A5A5;
+}
+
+/*.red-dot{
+  background-color: $pink;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  margin-top: 20px;
+}*/
 
 /*# sourceMappingURL=styles.css.map */
