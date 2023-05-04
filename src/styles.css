@@ -202,4 +202,12 @@ header {
   align-items: center;
 }
 
+.cards h2 {
+  font-family: "Raleway";
+}
+
+.cards p {
+  font-family: "Open Sans";
+}
+
 /*# sourceMappingURL=styles.css.map */
