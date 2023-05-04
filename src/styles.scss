@@ -30,6 +30,25 @@ body {
 }
 
 h1{
-  color: $blue;
   font-family: $font;
+  font-size: 35px;
+  text-align: center;
+}
+
+.why-us{
+  margin-top: 35px;
+}
+
+.why-us p{
+  font-family: 'Open Sans';
+}
+
+button{
+  color: white;
+  background-color: $blue;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 40px;
+  width: 310px;
+  padding: 20px;
+  font-family: 'Open Sans';
 }
