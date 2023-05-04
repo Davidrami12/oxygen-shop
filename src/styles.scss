@@ -108,7 +108,7 @@ header{
 }*/
 
 .why-us .topics{
-  margin-top: -55vh;
+  margin-top: -60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,55 +120,88 @@ header{
   font-style: normal;
   font-weight: 300;
   font-size: 30px;
-  
 }
 
-.topic1{
+.topic1, .topic2, .topic3{
   display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .topic1-img{
   width: 62.71px;
-    height: 62.71px;
-    border-radius: 50%;
-    position: relative;
-    background-color: #FB3B64;
+  height: 62.71px;
+  border-radius: 50%;
+  position: relative;
+  background-color: $pink;
+}
+
+.topic2-img{
+  width: 62.71px;
+  height: 62.71px;
+  border-radius: 50%;
+  position: relative;
+  background-color: $blue;
+}
+
+.topic3-img{
+  width: 62.71px;
+  height: 62.71px;
+  border-radius: 50%;
+  position: relative;
+  background-color: $green;
 }
 
 .topic1-img img{
   position: absolute;
-    width: 2.75rem;
-    height: 3.25rem;
-    left: 2rem;
-    top: 3px;
+  width: 2.75rem;
+  height: 3.25rem;
+  left: 2rem;
+  top: 3px;
+}
+
+.topic2-img img{
+  position: absolute;
+  width: 4rem;
+  height: 2.5rem;
+  left: 1.25rem;
+  top: 10px;
+}
+
+.topic3-img img{
+  position: absolute;
+  width: 3.5rem;
+  height: 3rem;
+  left: 2rem;
+  top: 8px;
 }
 
 .paragraph1{
-  font-weight: 800;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
   text-align: center;
   letter-spacing: 5.96px;
   color: #000000;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 24px;
+  margin-top: 20px;
 }
 
 .paragraph2{
-  width: 95px;
+  width: 80%;
   height: 1.25rem;
   font-weight: 400;
-  font-size: 1.0625rem;
+  font-size: 17px;
   line-height: 1.25rem;
   text-align: center;
   color: #A5A5A5;
+  font-family: 'Raleway';
+  font-style: normal;
+  line-height: 20px;
+  margin-top: 20px;
 }
 
-/*.red-dot{
-  background-color: $pink;
-  width: 5em;
-  height: 5em;
-  border-radius: 50%;
-  margin-top: 20px;
-}*/
+
 
