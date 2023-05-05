@@ -214,6 +214,10 @@ header {
   width: 314px;
 }
 
+.card3 {
+  margin-bottom: 3rem;
+}
+
 .card1-img, .card2-img {
   position: relative;
   width: 100%;
