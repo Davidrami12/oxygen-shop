@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Open Sans";
 }
 
 body {
@@ -202,7 +203,7 @@ header {
   align-items: center;
 }
 
-.card1, .card2 {
+.card1, .card2, .card3 {
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -211,23 +212,38 @@ header {
   border-radius: 5px;
   margin-top: 3rem;
   width: 314px;
-  height: 370px;
 }
 
-.card1-img {
+.card1-img, .card2-img {
   position: relative;
   width: 100%;
   align-items: center;
 }
 
-.card1-img img {
+.card3-img {
+  position: relative;
+  width: 100%;
+  align-items: center;
+}
+
+.card1-img img, .card2-img img {
   position: relative;
   margin: 1rem 0;
   z-index: 1;
   width: 70%;
   display: block;
   margin: auto;
-  top: 15px;
+  top: 30px;
+}
+
+.card3-img img {
+  position: relative;
+  margin: 1rem 0;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  margin: auto;
+  top: 25px;
 }
 
 .card1-circle {
@@ -251,13 +267,38 @@ header {
   background-color: #08A6E4;
 }
 
-.cards h2 {
+.card3-circle {
+  position: absolute;
+  width: 314px;
+  height: 140px;
+  top: 10px;
+  background-color: #55DFB4;
+  background: #55DFB4;
+  height: 195px;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  margin-left: -16px;
+}
+
+.card1 h2, .card2 h2 {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 35px;
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-left: 10px;
+  text-align: left;
+  width: 80%;
+}
+
+.card3 h2 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  margin-top: 20px;
   margin-left: 10px;
   text-align: left;
   width: 80%;
@@ -265,9 +306,57 @@ header {
 
 .cards p {
   font-family: "Open Sans";
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 12px;
   margin-left: 10px;
+}
+
+.pricing {
+  background-color: white;
+  display: flex;
+  margin-top: 30px;
+}
+
+.prices {
+  margin: 1rem auto;
+  max-width: 422px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1rem 1.75rem 2rem;
+}
+
+.pricing h1 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.basic {
+  position: relative;
+  padding: 20px 10px 50px;
+  border: 1.5px solid #FB3B64;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.price-info {
+  height: 105px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
