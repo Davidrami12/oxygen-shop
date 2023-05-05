@@ -193,13 +193,17 @@ header {
 
 .benefits {
   background: #F7F7F7;
+  padding: 2.5rem 1.75rem;
 }
 
 .cards {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-items: center;
+}
+
+.card1 {
+  background-color: white;
 }
 
 .cards h2 {
