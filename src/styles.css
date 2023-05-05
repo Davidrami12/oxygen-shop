@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  z-index: 1;
+  z-index: 2;
   display: block;
   position: fixed;
   left: 0px;
@@ -223,7 +223,7 @@ header {
 .card1-img img {
   position: relative;
   margin: 1rem 0;
-  z-index: 2;
+  z-index: 1;
   width: 70%;
   display: block;
   margin: auto;
@@ -241,6 +241,16 @@ header {
   background-color: #FB3B64;
 }
 
+.card2-circle {
+  position: absolute;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  top: 10px;
+  left: 50px;
+  background-color: #08A6E4;
+}
+
 .cards h2 {
   font-family: "Raleway";
   font-style: normal;
@@ -250,6 +260,7 @@ header {
   margin-top: 40px;
   margin-left: 10px;
   text-align: left;
+  width: 80%;
 }
 
 .cards p {
