@@ -203,6 +203,8 @@ header{
   margin-top: 20px;
 }
 
+
+
 .benefits{
   background: #F7F7F7;
   padding: 2.5rem 1.75rem;
@@ -215,7 +217,41 @@ header{
 }
 
 .card1/*, .card2, .card3*/{
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  padding: 1rem;
+  background: #FFFFFF;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  margin: 2rem 0;
+  width: 314px;
+  height: 370px;
+}
+
+.card1-img{
+  position: relative;
+  width: 100%;
+  align-items: center;
+}
+
+.card1-img img{
+  position: relative;
+  margin: 1rem 0;
+  z-index: 2;
+  width: 80%;
+}
+
+.card1-circle{
+  position: absolute;
+    border-radius: 41px;
+    transform: rotate(-45deg);
+    width: 90.12px;
+    height: 90.12px;
+    top: 0px;
+    left: 110px;
+    background-color: #FB3B64;
 }
 
 .cards h2{
@@ -224,8 +260,5 @@ header{
 
 .cards p{
   font-family: 'Open Sans';
-}
-
-.card1{
-
+  margin-top: 20px;
 }
