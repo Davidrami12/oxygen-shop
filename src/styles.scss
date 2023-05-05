@@ -113,6 +113,7 @@ header{
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  margin-bottom: 30px;
 }
 
 .why-us .topics p{
@@ -207,7 +208,6 @@ header{
 
 .benefits{
   background: #F7F7F7;
-  padding: 2.5rem 1.75rem;
 }
 
 .cards{
@@ -216,16 +216,14 @@ header{
   align-items: center;
 }
 
-.card1/*, .card2, .card3*/{
+.card1, .card2/*, .card3*/{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-items: center;
   padding: 1rem;
   background: #FFFFFF;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
-  margin: 2rem 0;
+  margin-top: 3rem;
   width: 314px;
   height: 370px;
 }
@@ -240,25 +238,37 @@ header{
   position: relative;
   margin: 1rem 0;
   z-index: 2;
-  width: 80%;
+  width: 70%;
+  display:block;
+  margin:auto;
+  top: 15px;
 }
 
 .card1-circle{
   position: absolute;
-    border-radius: 41px;
-    transform: rotate(-45deg);
-    width: 90.12px;
-    height: 90.12px;
-    top: 0px;
-    left: 110px;
-    background-color: #FB3B64;
+  border-radius: 41px;
+  transform: rotate(-50deg);
+  width: 90.12px;
+  height: 90.12px;
+  top: 0px;
+  left: 150px;
+  background-color: $pink;
 }
 
 .cards h2{
   font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  margin-top: 40px;
+  margin-left: 10px;
+  text-align: left;
 }
 
 .cards p{
   font-family: 'Open Sans';
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  margin-left: 10px;
 }
