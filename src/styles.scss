@@ -329,17 +329,8 @@ header{
 .pricing{
   background-color: white;
   display: flex;
-  margin-top: 30px;
-}
-
-.prices{
-  margin: 1rem auto;
-  max-width: 422px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2.5rem;
-  padding: 1rem 1.75rem 2rem;
+  margin-top: 30px;
 }
 
 .pricing h1{
@@ -350,6 +341,17 @@ header{
   line-height: 42px;
   text-align: center;
 }
+
+.prices{
+  margin: 1rem auto;
+  max-width: 422px;
+  
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1rem 1.75rem 2rem;
+}
+
+
 
 .basic{
   position: relative;
