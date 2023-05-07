@@ -350,12 +350,18 @@ header{
 .prices{
   margin: 1rem auto;
   max-width: 422px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  
+  /*margin: 1rem auto;
+  max-width: 422px;
   
   align-items: center;
   gap: 2.5rem;
-  padding: 1rem 1.75rem 2rem;
+  padding: 1rem 1.75rem 2rem;*/
 }
-
 
 
 .basic{
@@ -381,4 +387,34 @@ header{
   text-align: center;
 }
 
+.price-list{
+  font-family: "Open Sans", sans-serif;
+  //list-style-image: url(../assets/img/icons/Checkbox.svg);
+  margin: 0;
+  padding-left: 25px;
+}
 
+.price-list-item{
+  margin-top: 0;
+  margin: 20px auto;
+}
+
+button {
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.price-button{
+  position: absolute;
+  background: $pink;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
