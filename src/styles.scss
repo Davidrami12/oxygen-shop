@@ -333,8 +333,8 @@ header{
 
 .pricing{
   background-color: white;
-  display: flex;
-  flex-direction: column;
+  padding: 1rem 1.75rem 2rem;
+  margin: 6.5rem auto 5rem;
   margin-top: 30px;
 }
 
@@ -345,6 +345,7 @@ header{
   font-size: 36px;
   line-height: 42px;
   text-align: center;
+  
 }
 
 .prices{
