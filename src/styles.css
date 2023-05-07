@@ -359,6 +359,19 @@ header {
   transition: 0.4s;
 }
 
+.professional {
+  position: relative;
+  padding: 20px 10px 50px;
+  border: 1.5px solid #08A6E4;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s;
+}
+
 .price-info {
   width: 40%;
   display: flex;
@@ -376,13 +389,35 @@ header {
   font-weight: 300;
 }
 
+.professional-price {
+  color: #08A6E4;
+  font-family: "Open Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 300;
+}
+
+.limited-offer {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+}
+
 .price-list {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding-left: 25px;
 }
 
-.price-list-item {
+.price-list-item-checkmark {
+  list-style-image: url(/src/img/icons/Checkbox.svg);
+  margin-top: 0;
+  margin: 20px auto;
+}
+
+.price-list-item-crossmark {
+  list-style-image: url(/src/img/icons/Cross.svg);
   margin-top: 0;
   margin: 20px auto;
 }
@@ -396,9 +431,20 @@ button {
   color: var(--white);
 }
 
-.price-button {
+.basic-button {
   position: absolute;
   background: #FB3B64;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.professional-button {
+  position: absolute;
+  background: #08A6E4;
   bottom: -1.5rem;
   left: 50%;
   transform: translateX(-50%);
