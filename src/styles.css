@@ -360,13 +360,20 @@ header {
 }
 
 .price-info {
-  height: 105px;
   width: 40%;
   display: flex;
   flex-direction: column;
   font-weight: 700;
   font-size: 20px;
   text-align: center;
+  margin-left: 12px;
+}
+
+.basic-price {
+  color: #FB3B64;
+  font-family: "Open Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 300;
 }
 
 .price-list {
