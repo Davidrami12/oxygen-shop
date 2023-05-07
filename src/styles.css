@@ -357,6 +357,7 @@ header {
   justify-content: space-between;
   align-items: center;
   transition: 0.4s;
+  margin-top: 10px;
 }
 
 .professional {
@@ -370,6 +371,21 @@ header {
   justify-content: space-between;
   align-items: center;
   transition: 0.4s;
+  margin-top: 20px;
+}
+
+.premium {
+  position: relative;
+  padding: 20px 10px 50px;
+  border: 1.5px solid #55DFB4;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s;
+  margin-top: 20px;
 }
 
 .price-info {
@@ -391,6 +407,13 @@ header {
 
 .professional-price {
   color: #08A6E4;
+  font-family: "Open Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 300;
+}
+
+.premium-price {
+  color: #55DFB4;
   font-family: "Open Sans", sans-serif;
   font-size: 46px;
   font-weight: 300;
@@ -445,6 +468,17 @@ button {
 .professional-button {
   position: absolute;
   background: #08A6E4;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.premium-button {
+  position: absolute;
+  background: #55DFB4;
   bottom: -1.5rem;
   left: 50%;
   transform: translateX(-50%);
