@@ -360,6 +360,11 @@ header {
   margin-top: 10px;
 }
 
+.basic:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba(226, 7, 56, 0.29);
+}
+
 .professional {
   position: relative;
   padding: 20px 10px 50px;
@@ -374,6 +379,11 @@ header {
   margin-top: 20px;
 }
 
+.professional:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+}
+
 .premium {
   position: relative;
   padding: 20px 10px 50px;
@@ -386,6 +396,11 @@ header {
   align-items: center;
   transition: 0.4s;
   margin-top: 20px;
+}
+
+.premium:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba(8, 225, 156, 0.29);
 }
 
 .price-info {
