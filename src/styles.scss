@@ -548,3 +548,52 @@ button {
   margin-right: 0.75rem;
   max-width: 22px;
 }
+
+.contact-form{
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form label{
+  width: 100%;
+  display: grid;
+  margin-bottom: 12px;
+  gap: 4rem;
+  font-size: 11px;
+  font-weight: 700;
+  color: $blue;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.contact-form .name, .contact-form .email{
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid $blue;
+  margin-bottom: 1rem;
+}
+
+.checkbox-div{
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+}
+
+.form-checkbox{
+  cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.checkbox-info{
+  width: calc(100% - 31px);
+  margin: 0;
+  color: #707070;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
