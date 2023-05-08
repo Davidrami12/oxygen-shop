@@ -42,6 +42,10 @@ header{
   display: none;
 }
 
+
+
+// WHY US SECTION
+
 .why-us{
   margin-top: 100px;
   width: 100%;
@@ -89,7 +93,6 @@ header{
   background-color: #159bd0;
   cursor: pointer;
 }
-
 
 .why-us-image-container{
   //display: grid;
@@ -206,6 +209,8 @@ header{
 }
 
 
+
+// BENEFITS SECTION
 
 .benefits{
   background: #F7F7F7;
@@ -331,6 +336,8 @@ header{
 
 
 
+// PRICING SECTION
+
 .pricing{
   background-color: white;
   padding: 1rem 1.75rem 2rem;
@@ -355,15 +362,7 @@ header{
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  
-  /*margin: 1rem auto;
-  max-width: 422px;
-  
-  align-items: center;
-  gap: 2.5rem;
-  padding: 1rem 1.75rem 2rem;*/
 }
-
 
 .basic{
   position: relative;
@@ -423,7 +422,7 @@ header{
 }
 
 .price-info{
-  //font-family: 'Raleway';
+  font-family: 'Raleway';
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -499,7 +498,6 @@ button {
   transform: translateX(-50%);
   color: white;
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
 }
 
 .professional-button{
@@ -510,7 +508,6 @@ button {
   transform: translateX(-50%);
   color: white;
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
 }
 
 .premium-button{
@@ -521,9 +518,11 @@ button {
   transform: translateX(-50%);
   color: white;
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
 }
 
+
+
+// CONTACT SECTION
 
 .contact{
   width: 80%;
@@ -538,4 +537,8 @@ button {
   margin: 0;
   font-weight: 400;
   font-size: 40px;
+}
+
+.contact #contact-info{
+  margin: 0;
 }
