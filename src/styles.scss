@@ -523,3 +523,19 @@ button {
   font-size: 1rem;
   font-family: "Open Sans", sans-serif;
 }
+
+
+.contact{
+  width: 80%;
+  margin: 3rem auto;
+  margin-top: 1.325rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.contact h1{
+  margin: 0;
+  font-weight: 400;
+  font-size: 40px;
+}
