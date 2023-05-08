@@ -500,7 +500,7 @@ button {
   margin-top: 1.325rem;
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 3rem;
 }
 
 .contact h1 {
@@ -509,8 +509,14 @@ button {
   font-size: 40px;
 }
 
-#contact-info p {
-  margin-top: -50px;
+.contact-info {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-info img {
+  margin-right: 0.75rem;
+  max-width: 22px;
 }
 
 /*# sourceMappingURL=styles.css.map */
