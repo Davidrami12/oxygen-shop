@@ -570,6 +570,7 @@ button {
 
 .form-button {
   cursor: pointer;
+  margin-top: 1rem;
   background-color: #08A6E4;
   color: white;
   position: relative;
@@ -580,6 +581,17 @@ button {
   transform: scale(1.05);
   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
   transition: 0.5s;
+}
+
+footer {
+  margin-top: 40px;
+  width: 100%;
+  background: #F7F7F7;
+  box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+}
+
+footer div {
+  padding: 21px 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
