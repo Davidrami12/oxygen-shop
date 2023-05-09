@@ -98,22 +98,25 @@ header{
   cursor: pointer;
 }
 
-.why-us-image-container{
-  //display: grid;
-  //height: 100%;
+/*.why-us-image-container{
   margin-top: 20px;
   height: 99vh;
   background: url(/src/img/Background1-mobile.png) no-repeat;
   background-size: contain;
+}*/
+
+.why-us-image-container{
+  overflow: hidden;
+  height: 99vh;
+  margin-top: 20px;
 }
 
-/*.why-us-image-container img{
-  background-size: contain;
-  max-width: 100%;
-  max-height: 100vh;
-  margin: auto;
-  margin-top: 20px;
-}*/
+.wallpaper{
+  height: 300px;
+  object-fit: fill;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
 
 .why-us .topics{
   margin-top: -60vh;
