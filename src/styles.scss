@@ -47,8 +47,7 @@ header{
 // WHY US SECTION
 
 .why-us{
-  margin-top: 100px;
-  width: 100%;
+  margin-top: 200px;
 }
 
 .why-us h1{
@@ -66,12 +65,19 @@ header{
   margin-top: 20px;
   font-family: 'Open Sans';
   text-align: center;
+  width: 75%;
+}
+
+.button-container{
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .why-us button{
   text-align: center;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 30px;
   background-color: $blue;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
@@ -79,8 +85,6 @@ header{
   padding: 20px;
   font-family: 'Open Sans';
   font-size: 1em;
-  margin-left: 50%;
-  transform: translateX(-50%);
   border-radius: 2.5rem;
   color: #FFFFFF;
   font-style: normal;
@@ -464,7 +468,6 @@ header{
 
 .price-list{
   font-family: "Open Sans", sans-serif;
-  //list-style-image: url(../assets/img/icons/Checkbox.svg);
   margin: 0;
   padding-left: 25px;
 }
