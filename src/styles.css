@@ -536,7 +536,8 @@ button {
 
 .contact-form label {
   width: 100%;
-  margin-bottom: 12px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 11px;
   font-weight: 700;
   color: #08A6E4;
@@ -548,7 +549,8 @@ button {
   width: 100%;
   border: 0;
   border-bottom: 1px solid #08A6E4;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .checkbox-div {
@@ -575,14 +577,15 @@ button {
   line-height: 16px;
 }
 
+.container-button {
+  text-align: right;
+}
+
 .form-button {
   cursor: pointer;
   margin-top: 1rem;
   background-color: #08A6E4;
   color: white;
-  position: relative;
-  margin-left: auto;
-  margin-right: 0;
   width: 60%;
   max-width: 225px;
   transform: scale(1.05);
