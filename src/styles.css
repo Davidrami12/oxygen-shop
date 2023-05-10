@@ -58,9 +58,8 @@ header {
 
 .button-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  text-align: center;
 }
 
 .why-us button {
@@ -107,9 +106,8 @@ header {
 
 .why-us .topics {
   margin-top: -60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  text-align: center;
   padding: 2rem;
   margin-bottom: 30px;
 }
@@ -207,20 +205,21 @@ header {
 }
 
 .cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  text-align: center;
 }
 
 .card1, .card2, .card3 {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
+  vertical-align: top;
   padding: 1rem;
   background: #FFFFFF;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
   margin-top: 3rem;
   width: 314px;
+  margin-right: 1rem;
+  text-align: left;
 }
 
 .card3 {
@@ -507,9 +506,8 @@ button {
   width: 80%;
   margin: 3rem auto;
   margin-top: 1.325rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  display: block;
+  margin-bottom: 3rem;
 }
 
 .contact h1 {
@@ -519,7 +517,7 @@ button {
 }
 
 .contact-info {
-  display: grid;
+  margin-top: 2rem;
   gap: 1rem;
 }
 
@@ -528,8 +526,13 @@ button {
   max-width: 22px;
 }
 
+.contact-info p {
+  margin-top: 0.5rem;
+}
+
 .contact-form {
   margin: 0;
+  margin-top: 3rem;
   display: grid;
   gap: 1rem;
 }
@@ -593,25 +596,19 @@ button {
 }
 
 footer {
-  margin-top: 40px;
+  height: 89px;
   background: #F7F7F7;
   box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
-}
-
-.footer-content {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  text-decoration: none;
 }
 
 .footer-info {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
+  width: 75%;
   font-size: 11px;
   color: #A5A5A5;
+  margin-left: 0.5rem;
 }
 
 .copyright {
@@ -620,10 +617,13 @@ footer {
 }
 
 .social-media {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  margin-top: 1rem;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2rem;
+}
+
+.social-media a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
