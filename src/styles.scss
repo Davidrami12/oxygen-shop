@@ -133,10 +133,10 @@ header{
 }
 
 .topic1, .topic2, .topic3{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+
   margin-top: 50px;
+  text-align: center;
 }
 
 .topic1-img{
@@ -145,6 +145,7 @@ header{
   border-radius: 50%;
   position: relative;
   background-color: $pink;
+  margin: 0 auto;
 }
 
 .topic2-img{
@@ -153,6 +154,7 @@ header{
   border-radius: 50%;
   position: relative;
   background-color: $blue;
+  margin: 0 auto;
 }
 
 .topic3-img{
@@ -161,9 +163,11 @@ header{
   border-radius: 50%;
   position: relative;
   background-color: $green;
+  margin: 0 auto;
 }
 
 .topic1-img img{
+  
   position: absolute;
   width: 2.75rem;
   height: 3.25rem;
@@ -197,10 +201,10 @@ header{
   font-size: 1.25rem;
   line-height: 24px;
   margin-top: 20px;
+  display: block;
 }
 
 .paragraph2{
-  width: 80%;
   height: 1.25rem;
   font-weight: 400;
   font-size: 17px;
@@ -209,8 +213,8 @@ header{
   color: #A5A5A5;
   font-family: 'Raleway';
   font-style: normal;
-  line-height: 20px;
   margin-top: 20px;
+  display: block;
 }
 
 
@@ -364,8 +368,6 @@ header{
 .prices{
   margin: 1rem auto;
   max-width: 422px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 2.5rem;
 }
@@ -375,13 +377,12 @@ header{
   padding: 20px 10px 50px;
   border: 1.5px solid $pink;
   border-radius: 18px;
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
   transition: 0.4s;
-  margin-top: 10px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .basic:hover{
@@ -394,13 +395,12 @@ header{
   padding: 20px 10px 50px;
   border: 1.5px solid $blue;
   border-radius: 18px;
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
   transition: 0.4s;
-  margin-top: 20px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .professional:hover{
@@ -413,30 +413,17 @@ header{
   padding: 20px 10px 50px;
   border: 1.5px solid $green;
   border-radius: 18px;
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
   transition: 0.4s;
-  margin-top: 20px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .premium:hover{
   transform: scale(1.05);
   box-shadow: 5px 10px 27px rgba(8, 225, 156, 0.29);
-}
-
-.price-info{
-  font-family: 'Raleway';
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  font-weight: 700;
-  font-size: 20px;
-  text-align: center;
-  margin-left: 12px;
-  
 }
 
 .basic-price{
@@ -468,10 +455,23 @@ header{
   line-height: 14px;
 }
 
+.price-info{
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 1rem;
+  vertical-align: middle;
+}
+
 .price-list{
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  padding-left: 25px;
+  padding-left: 5rem;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
 
 .price-list-item-checkmark{
@@ -560,15 +560,11 @@ button {
 .contact-form{
   margin: 0;
   margin-top: 3rem;
-  display: grid;
-  gap: 1rem;
 }
 
 .contact-form label{
   width: 100%;
-  display: grid;
   margin-bottom: 12px;
-  gap: 4rem;
   font-size: 11px;
   font-weight: 700;
   color: $blue;
