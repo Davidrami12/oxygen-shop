@@ -64,11 +64,13 @@ header{
   cursor: pointer;
   color: #A5A5A5;
   text-decoration: none;
+  margin-left: 20px;
 }
 
 .list li a:hover{
   color: black;
   text-decoration: none;
+  transition: 0.75s;
 }
 
 // HAMBURGER MENU
@@ -79,7 +81,7 @@ nav {
 	font-size: 18px;
 	font-weight: bold;
 	font-family: sans-serif;
-	padding: 15px;
+	//padding: 15px;
 }
 
 .menu {
@@ -99,11 +101,12 @@ nav {
 }
 
 
-label, input{
-  align-items: right;
+#toggler-label, #toggler{
+  position: absolute;
+  right: 25px;
 }
 
-nav label{
+#toggler-label{
   cursor: pointer;
   color: $blue;
   position: absolute;
@@ -125,7 +128,7 @@ nav label{
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 
@@ -142,7 +145,7 @@ nav label{
   }
 
   #toggler,
-  label {
+  #toggler-label {
     display: none;
   }
 
@@ -162,13 +165,18 @@ nav label{
 
   .list li{
     margin-bottom: -5px;
+    
+  }
+
+  .list li a:hover{
     border-bottom: 4px solid #08A6E4;
+    transition: 0s;
   }
 
   .logo{
+    margin-top: 15px;
+    margin-bottom: 15px;
     margin-left: 5rem;
-    margin-top: 0px;
-    margin-bottom: 0px;
   }
 
 
@@ -511,6 +519,7 @@ nav label{
   border-radius: 18px;
   display: inline-block;
   width: 100%;
+  max-width: 350px;
   text-align: center;
   transition: 0.4s;
   margin-top: 3rem;
@@ -529,6 +538,7 @@ nav label{
   border-radius: 18px;
   display: inline-block;
   width: 100%;
+  max-width: 350px;
   text-align: center;
   transition: 0.4s;
   margin-top: 3rem;
@@ -547,6 +557,7 @@ nav label{
   border-radius: 18px;
   display: inline-block;
   width: 100%;
+  max-width: 350px;
   text-align: center;
   transition: 0.4s;
   margin-top: 3rem;
@@ -695,6 +706,7 @@ button {
 }
 
 .contact-form label{
+  display: block;
   width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -706,11 +718,13 @@ button {
 }
 
 .contact-form .name, .contact-form .email{
+  display: block;
   width: 100%;
   border: 0;
   border-bottom: 1px solid $blue;
   margin-bottom: 2rem;
   margin-top: 1rem;
+  max-width: 440px;
 }
 
 .checkbox-div{
