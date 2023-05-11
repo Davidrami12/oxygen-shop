@@ -2,7 +2,7 @@ $blue: #08A6E4;
 $pink: #FB3B64;
 $green: #55DFB4;
 $font: 'Raleway', serif;
-// $titles-font: Raleway;
+
 
 
 * {
@@ -10,6 +10,7 @@ $font: 'Raleway', serif;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans';
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,12 +36,140 @@ header{
   font-size: 2em;
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-left: 0.5em;
+  margin-left: 1.5rem;
+  display: inline-block;
 }
 
 .nav-content{
-  display: none;
+  margin-left: 0.75rem;
+  margin-top: 25px;
+  padding: 20px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 3.28px;
+  text-transform: uppercase;
+  width: 100%;
+  //display: inline-block;
 }
+
+.list li{
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.list li a{
+  cursor: pointer;
+  color: #A5A5A5;
+  text-decoration: none;
+}
+
+.list li a:hover{
+  color: black;
+  text-decoration: none;
+}
+
+// HAMBURGER MENU
+
+nav {
+	align-items: center;
+	justify-content: space-between;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding: 15px;
+}
+
+.menu {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: left;
+  letter-spacing: 3.28px;
+  text-transform: uppercase;
+
+  width: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+}
+
+label, input{
+  align-items: right;
+}
+
+#toggler{
+  visibility: visible;
+}
+
+#toggler:checked~.menu {
+  visibility: visible;
+  position: relative;
+}
+
+.list {
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+
+
+
+@media only screen and (min-width: 1000px) {
+
+	.list {
+    text-align: right;
+    flex-direction: row;
+    display: flex;
+    list-style: none;
+    gap: 100px;
+  }
+
+  #toggler,
+  label {
+    display: none;
+  }
+
+  #toggler{
+    visibility: visible;
+  }
+  
+  #toggler:checked~.menu {
+    visibility: visible;
+    position: relative;
+  }
+
+  .menu{
+    visibility: visible;
+    position: relative;
+  }
+
+  .list li{
+    margin-bottom: -5px;
+    border-bottom: 4px solid #08A6E4;
+  }
+
+  .logo{
+    margin-left: 5rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+
+  nav{
+    display: flex;
+    align-items: center;
+    
+  }
+}
+
 
 
 
@@ -81,6 +210,7 @@ header{
   background-color: $blue;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   width: 80%;
+  max-width: 310px;
   padding: 20px;
   font-family: 'Open Sans';
   font-size: 1em;
@@ -96,13 +226,6 @@ header{
   background-color: #159bd0;
   cursor: pointer;
 }
-
-/*.why-us-image-container{
-  margin-top: 20px;
-  height: 99vh;
-  background: url(/src/img/Background1-mobile.png) no-repeat;
-  background-size: contain;
-}*/
 
 .why-us-image-container{
   overflow: hidden;
@@ -239,7 +362,6 @@ header{
   border-radius: 5px;
   margin-top: 3rem;
   width: 314px;
-  margin-right: 1rem;
   text-align: left;
 }
 
@@ -468,7 +590,7 @@ header{
 .price-list{
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  padding-left: 5rem;
+  padding-left: 2.5rem;
   display: inline-block;
   text-align: left;
   vertical-align: middle;
@@ -582,18 +704,18 @@ button {
 }
 
 .checkbox-div{
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  gap: 10px;
+  display: inline-block;
+  width: 100%;
 }
 
 .form-checkbox{
   cursor: pointer;
-  position: relative;
   width: 24px;
   height: 24px;
   border: 1px solid gray;
   border-radius: 4px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .checkbox-info{
@@ -603,6 +725,7 @@ button {
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
+  display: inline-block;
 }
 
 .container-button{
@@ -642,7 +765,7 @@ footer{
 }
 
 .copyright{
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
   margin-top: -1rem;
 }
 
@@ -654,4 +777,13 @@ footer{
 
 .social-media a{
   text-decoration: none;
+}
+
+
+
+
+
+// DESKTOP STYLES
+@media only screen and (min-width: 1000px) {
+  
 }

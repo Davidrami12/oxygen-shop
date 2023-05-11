@@ -15,20 +15,30 @@
 <body>
     
     <header>
-        <p class="logo">OXYGENShop</p>
-        <nav class="nav-content">
-            <ul>
-                <li>WHY US</li>
-                <li>BENEFITS</li>
-                <li>PRICES</li>
-                <li>CONTACT</li>
-            </ul>
+
+
+        <nav>
+            <a href="#"><p class="logo">OXYGENShop</p></a>
+
+            <label for="toggler"></label>
+            <input type="checkbox" id="toggler" name="">
+
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="#why-us">WHY US</a></li>
+                    <li><a href="#benefits">BENEFITS</a></li>
+                    <li><a href="#pricing">PRICES</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
         </nav>
+
+
     </header>
     
     <section class="content">
 
-        <article class="why-us">
+        <article class="why-us" id="why-us">
             <h1>Sell more!</h1>
             <p>Open shop on our platform and increase your sales</p>
             <div class="button-container">
@@ -69,7 +79,7 @@
 
         </article>
 
-        <article class="benefits">
+        <article class="benefits" id="benefits">
             <div class="cards">
                 <div class="card1">
                     <div class="card1-img">
@@ -100,7 +110,7 @@
             </div>
         </article>
         
-        <article class="pricing">
+        <article class="pricing" id="pricing">
             <h1>Pricing</h1>
 
             <div class="prices">
@@ -155,7 +165,7 @@
 
         </article>
         
-        <article class="contact">
+        <article class="contact" id="contact">
             <div>
                 <h1>Any questions?</h1>
                 <p>Leave your email address or call us!</p>
