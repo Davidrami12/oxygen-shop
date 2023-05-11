@@ -98,12 +98,22 @@ nav {
   position: absolute;
 }
 
+
 label, input{
   align-items: right;
 }
 
+nav label{
+  cursor: pointer;
+  color: $blue;
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 200px;
+}
+
 #toggler{
-  visibility: visible;
+  //visibility: visible;
+  display: none;
 }
 
 #toggler:checked~.menu {
