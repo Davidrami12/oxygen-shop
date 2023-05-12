@@ -124,7 +124,6 @@ nav {
 .why-us h1 {
   font-family: "Raleway", serif;
   text-align: center;
-  text-align: center;
   line-height: 2.5625rem;
   font-size: 2.1875rem;
   font-weight: 400;
@@ -172,6 +171,7 @@ nav {
   overflow: hidden;
   height: 99vh;
   margin-top: 20px;
+  margin-bottom: -550px;
 }
 
 .wallpaper {
@@ -182,7 +182,6 @@ nav {
 }
 
 .why-us .topics {
-  margin-top: -60vh;
   display: block;
   text-align: center;
   padding: 2rem;
@@ -740,11 +739,17 @@ footer {
   .logo {
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 5rem;
+    margin-left: 5.5rem;
   }
   nav {
     display: flex;
     align-items: center;
+  }
+  .why-us {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
   }
   .why-us button {
     max-width: 440px;
@@ -753,6 +758,7 @@ footer {
     width: 100%;
     display: block;
     overflow: hidden;
+    margin-bottom: -250px;
   }
   .wallpaper {
     width: 100%;
@@ -760,16 +766,27 @@ footer {
     width: 100%;
     height: 100%;
     margin-top: -150px;
+    margin-bottom: -200px;
   }
-  .why-us {
+  .topic-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
     display: block;
-    flex-direction: column;
-    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 50px;
   }
   .why-us .topics {
+    margin-top: -300px;
     display: flex;
+    width: 50%;
     flex-direction: row;
     text-align: center;
+    margin-bottom: 200px;
+    justify-content: space-between;
+    margin: 0 auto;
   }
 }
 
