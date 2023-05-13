@@ -283,6 +283,7 @@ nav {
 }
 
 .cards {
+  padding: 5%;
   display: block;
   text-align: center;
 }
@@ -789,6 +790,22 @@ footer {
     justify-content: space-between;
     margin: 0 auto;
   }
+  .cards {
+    display: grid;
+    gap: 42px;
+    margin: 0 auto;
+    max-width: 1124px;
+  }
+  .card1, .card2, .card3 {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pricing {
+    margin-top: 100px;
+  }
   .prices {
     display: flex;
     flex-wrap: nowrap;
@@ -830,6 +847,9 @@ footer {
   }
   .checkbox-div {
     max-width: 440px;
+  }
+  .copyright {
+    margin-left: 5.5rem;
   }
 }
 

@@ -313,6 +313,7 @@ nav {
 }
 
 .cards{
+  padding: 5%;
   display: block;
   text-align: center;
 }
@@ -754,10 +755,11 @@ footer{
 
 
 
-// DESKTOP STYLES
+// ALL DESKTOP STYLES
+
 @media only screen and (min-width: 1000px) {
 
-  // HEADER LINKS - DESKTOP
+  // HEADER SECTION + LINKS
 	.list {
     text-align: right;
     flex-direction: row;
@@ -809,7 +811,7 @@ footer{
 
 
 
-  // WHY US SECTION - DESKTOP
+  // WHY US SECTION
 
   .why-us{
     display: block;
@@ -835,7 +837,6 @@ footer{
     width: 100%;
     height: 100%;
     margin-top: -150px;
-    //padding-top: 200px;
     margin-bottom: -200px;
   }
 
@@ -863,6 +864,22 @@ footer{
 
 
 
+  // BENEFITS SECTION
+
+  .cards{
+    display: grid;
+    gap: 42px;
+    margin: 0 auto;
+    max-width: 1124px;
+  }
+
+  .card1, .card2, .card3{
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
 
 
 
@@ -870,10 +887,38 @@ footer{
 
 
 
-  // PRICING SECTION - DESKTOP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // PRICING SECTION
+
+  .pricing{
+    margin-top: 100px;
+  }
 
   .prices{
-    //min-width: 372px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -898,9 +943,7 @@ footer{
 
 
 
-
-
-  // CONTACT SECTION - DESKTOP
+  // CONTACT SECTION
 
   .contact{
     display: flex;
@@ -911,7 +954,6 @@ footer{
 
   .contact-container{
     min-width: 400px;
-    //margin-left: 6rem;
   }
 
   .contact-info{
@@ -933,4 +975,10 @@ footer{
   }
   
 
+
+  // FOOTER SECTION
+
+  .copyright{
+    margin-left: 5.5rem;
+  }
 }
