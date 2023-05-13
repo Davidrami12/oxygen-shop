@@ -801,7 +801,6 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: center;
   }
   .pricing {
     margin-top: 100px;
