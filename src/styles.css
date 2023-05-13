@@ -666,7 +666,7 @@ button {
 
 .form-button {
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 2rem;
   background-color: #08A6E4;
   color: white;
   width: 60%;
@@ -807,6 +807,29 @@ footer {
     list-style-position: inside;
     text-align: center;
     margin-left: -50px;
+  }
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 3rem;
+  }
+  .contact-container {
+    min-width: 400px;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .contact-form {
+    margin-top: 0;
+  }
+  .contact-form .name, .contact-form .email {
+    max-width: 440px;
+  }
+  .checkbox-div {
+    max-width: 440px;
   }
 }
 

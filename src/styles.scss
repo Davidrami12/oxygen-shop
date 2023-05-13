@@ -705,7 +705,7 @@ button {
 
 .form-button{
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 2rem;
   background-color: $blue;
   color: white;
   width: 60%;
@@ -898,6 +898,39 @@ footer{
 
 
 
-  // 
+
+
+  // CONTACT SECTION - DESKTOP
+
+  .contact{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 3rem;
+  }
+
+  .contact-container{
+    min-width: 400px;
+    //margin-left: 6rem;
+  }
+
+  .contact-info{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .contact-form{
+    margin-top: 0;
+  }
+
+  .contact-form .name, .contact-form .email{
+    max-width: 440px;
+  }
+
+  .checkbox-div{
+    max-width: 440px;
+  }
+  
 
 }
