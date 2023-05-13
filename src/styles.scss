@@ -454,6 +454,7 @@ nav {
 .prices{
   margin: 1rem auto;
   max-width: 422px;
+  padding: 2rem;
   align-items: center;
   gap: 2.5rem;
 }
@@ -860,5 +861,43 @@ footer{
     margin: 0 auto;
   }
 
+
+
+
+
+
+
+
+
+
+  // PRICING SECTION - DESKTOP
+
+  .prices{
+    //min-width: 372px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    max-width: none;
+  }
+
+  .basic, .professional, .premium{
+    max-width: 372px;
+    flex-direction: column;
+  }
+
+  .price-info{
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .price-list{
+    list-style-position: inside;
+    text-align: center;
+    margin-left: -50px;
+  }
+
+
+
+  // 
 
 }
