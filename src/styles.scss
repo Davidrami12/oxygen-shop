@@ -317,10 +317,14 @@ nav {
   display: block;
   text-align: center;
 }
+
+.card1-text hr, .card2-text hr, .card3-text hr{
+  visibility: hidden;
+}
   
 .card1, .card2, .card3{
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  margin: 0 auto;
   padding: 1rem;
   background: #FFFFFF;
   border: 1px solid #E8E9ED;
@@ -342,7 +346,7 @@ nav {
 
 .card3-img{
   position: relative;
-  width: 100%;
+  //width: 100%;
   align-items: center;
 }
 
@@ -429,6 +433,8 @@ nav {
   margin-top: 30px;
   margin-bottom: 12px;
   margin-left: 10px;
+  padding: 20px;
+  padding-left: unset;
 }
 
 
@@ -868,19 +874,123 @@ footer{
 
   .cards{
     display: grid;
-    gap: 42px;
+    gap: 0px;
     margin: 0 auto;
     max-width: 1124px;
   }
 
-  .card1, .card2, .card3{
-    width: 80%;
+  .cards p {
+    margin-top: 18px;
+  }
+  
+
+  .card1, .card2{
+    width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    // flex-direction: row-reverse;
     justify-content: space-between;
     //align-items: center;
+    padding: 5%;
   }
 
+  .card3{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    padding: 5%;
+    margin-top: 3rem;
+    /*margin-left: 0;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;*/
+  }
+
+  .card3-text{
+    width: 55%;
+    border-radius: 5px;
+  }
+
+  .card3-img{
+    height: auto;
+    width: 40%;
+    border-radius: 5px;
+  }
+
+  .card1{
+    flex-direction: row-reverse;
+  }
+
+  .card1 h2{
+    margin-top: 10px;
+  }
+
+  .card1-img img{
+    top: 20px;
+    width: 300px;
+  }
+
+  .card2-img img{
+    width: 350px;
+  }
+
+  .card1-circle{
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    border-radius: 20px;
+  }
+
+  .card2-circle{
+    top: -10px;
+    left: 0px;
+    width: 250px;
+    height: 250px;
+  }
+
+  /*.card3-circle{
+    top: -47px;
+    height: 383px;
+    margin-left: 240px;
+    width: 350px;
+  }*/
+
+  .card1-text{
+    max-width: 460px;
+  }
+
+  /*.card3-text{
+    width: 55%;
+    border-radius: 5px;
+  }
+
+  .card3-img{
+    height: auto;
+    width: 40%;
+    border-radius: 5px;
+  }*/
+
+  .card1-text hr{
+    visibility: visible;
+    border: 2px solid $pink;
+    width: 327.64px;
+    margin-left: 10px;
+  }
+
+  .card2-text hr{
+    visibility: visible;
+    border: 2px solid $blue;
+    width: 327.64px;
+    margin-left: 10px;
+  }
+
+  .card3-text hr{
+    visibility: visible;
+    border: 2px solid $green;
+    width: 327.64px;
+    margin-left: 10px;
+  }
 
 
 
