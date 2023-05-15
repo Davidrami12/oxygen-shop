@@ -897,9 +897,11 @@ footer{
     display: flex;
     justify-content: space-between;
     margin: 0;
-    width: 100%;
+    width: 60%;
     padding: 5%;
     margin-top: 3rem;
+
+    background: #FFFFFF;
     /*margin-left: 0;
     width: 60%;
     display: flex;
@@ -908,14 +910,14 @@ footer{
   }
 
   .card3-text{
-    width: 55%;
+    width: 100%;
     border-radius: 5px;
   }
 
   .card3-img{
-    height: auto;
+    /*height: auto;
     width: 40%;
-    border-radius: 5px;
+    border-radius: 5px;*/
   }
 
   .card1{
@@ -924,6 +926,10 @@ footer{
 
   .card1 h2{
     margin-top: 10px;
+  }
+
+  .card3 h2{
+    width: 100%;
   }
 
   .card1-img img{
@@ -949,27 +955,29 @@ footer{
     height: 250px;
   }
 
-  /*.card3-circle{
+  .card3-img img{
+    position: relative;
+    margin: 1rem 0;
+    z-index: 1;
+    width: 100%;
+    display:block;
+    margin:auto;
+    top: 25px;
+    left: 250px;
+    height: 200px;
+    width: 280px;
+  }
+
+  .card3-circle{
     top: -47px;
-    height: 383px;
+    height: 347px;
     margin-left: 240px;
-    width: 350px;
-  }*/
+    width: 325px;
+  }
 
   .card1-text{
     max-width: 460px;
   }
-
-  /*.card3-text{
-    width: 55%;
-    border-radius: 5px;
-  }
-
-  .card3-img{
-    height: auto;
-    width: 40%;
-    border-radius: 5px;
-  }*/
 
   .card1-text hr{
     visibility: visible;
