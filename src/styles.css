@@ -817,21 +817,10 @@ footer {
     width: 60%;
     padding: 5%;
     margin-top: 3rem;
-    background: #FFFFFF;
-    /*margin-left: 0;
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    padding: 5%;*/
   }
   .card3-text {
     width: 100%;
     border-radius: 5px;
-  }
-  .card3-img {
-    /*height: auto;
-    width: 40%;
-    border-radius: 5px;*/
   }
   .card1 {
     flex-direction: row-reverse;

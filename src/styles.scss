@@ -52,7 +52,6 @@ header{
   letter-spacing: 3.28px;
   text-transform: uppercase;
   width: 100%;
-  //display: inline-block;
 }
 
 .list li{
@@ -81,7 +80,6 @@ nav {
 	font-size: 18px;
 	font-weight: bold;
 	font-family: sans-serif;
-	//padding: 15px;
 }
 
 .menu {
@@ -115,7 +113,6 @@ nav {
 }
 
 #toggler{
-  //visibility: visible;
   display: none;
 }
 
@@ -147,14 +144,12 @@ nav {
   line-height: 2.5625rem;
   font-size: 2.1875rem;
   font-weight: 400;
-  //margin-bottom: 500px;
 }
 
 
 .why-us p{
   display: block;
   margin: auto;
-  // margin-top: 20px;
   font-family: 'Open Sans';
   text-align: center;
   width: 75%;
@@ -205,7 +200,6 @@ nav {
 }
 
 .why-us .topics{
-  //margin-top: -60vh;
   display: block;
   text-align: center;
   padding: 2rem;
@@ -346,7 +340,6 @@ nav {
 
 .card3-img{
   position: relative;
-  //width: 100%;
   align-items: center;
 }
 
@@ -887,9 +880,7 @@ footer{
   .card1, .card2{
     width: 100%;
     display: flex;
-    // flex-direction: row-reverse;
     justify-content: space-between;
-    //align-items: center;
     padding: 5%;
   }
 
@@ -901,23 +892,11 @@ footer{
     padding: 5%;
     margin-top: 3rem;
 
-    background: #FFFFFF;
-    /*margin-left: 0;
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    padding: 5%;*/
   }
 
   .card3-text{
     width: 100%;
     border-radius: 5px;
-  }
-
-  .card3-img{
-    /*height: auto;
-    width: 40%;
-    border-radius: 5px;*/
   }
 
   .card1{
@@ -999,34 +978,6 @@ footer{
     width: 327.64px;
     margin-left: 10px;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
