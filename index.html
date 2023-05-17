@@ -193,8 +193,10 @@
             <form class="contact-form">
                 <label for="name">NAME</label>
                 <input type="text" class="name" id="name" autocomplete="NAME"/>
+                <p class="name-validation">Please enter a valid name</p>
                 <label for="email">EMAIL</label>
                 <input type="text" class="email" id="email" autocomplete="EMAIL"/>
+                <p class="email-validation">Please enter a valid email</p>
                 
                 <div class="checkbox-div">
                     <input type="checkbox" class="form-checkbox" id="checkbox"/>
@@ -205,9 +207,10 @@
                         processing of personal data and on the free movement of such data, and repealing 
                         Directive 95/46/EC (Data Protection Directive)
                     </p>
+                    <p class="checkbox-validation">Please check before continue</p>
                 </div>
                 <div class="container-button">
-                    <button class="form-button">Send</button>
+                    <input type="submit" class="form-button" value="Send"></input>
                 </div>
             </form>
             

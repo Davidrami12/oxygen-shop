@@ -57,6 +57,51 @@ document.addEventListener('scroll', showTopButton);
 /* Implementar validación en el formulario. El nombre tiene que tener entre 2 y 100 letras, 
 la dirección de correo electrónico tiene que ser válida (https://www.emailregex.com/) y 
 tienen que hacer el checkbox. Si un campo no es válido, cambiar el color de su border a rojo */
+const formValidation = (e) => {
+    e.preventDefault();
+
+    let nameRegex = /^[A-Za-z]{2,100}$/;
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+    let nameValue = document.querySelector('.name').value
+    let emailValue = document.querySelector('.email').value
+    let nameTextError = document.querySelector('.name-validation')
+    let emailTextError = document.querySelector('.email-validation')
+    let checkboxTextError = document.querySelector('.checkbox-validation')
+    let name = document.querySelector('.name')
+    let email = document.querySelector('.email')
+    let checkbox = document.querySelector('.form-checkbox')
+    
+    // Name validation
+    if(!nameRegex.test(nameValue)){
+        nameTextError.style.visibility = "visible"
+        name.style.borderBottom = "1px solid red"
+    }else{
+        nameTextError.style.visibility = "hidden"
+        name.style.borderBottom = "1px solid #08A6E4"
+    }
+
+    // Email validation
+    if(!emailRegex.test(emailValue)){
+        emailTextError.style.visibility = "visible"
+        email.style.borderBottom = "1px solid red"
+    }else{
+        emailTextError.style.visibility = "hidden"
+        email.style.borderBottom = "1px solid #08A6E4"
+    }
+
+    // Checkbox validation
+    if(!checkbox.checked){
+        checkboxTextError.style.visibility = "visible"
+    }else{
+        checkboxTextError.style.visibility = "hidden"
+    }
+}
+
+document.querySelector('.contact-form').addEventListener('submit', formValidation)
+
+
+
 
 
 

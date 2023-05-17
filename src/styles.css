@@ -562,7 +562,16 @@ button {
   border: 1px solid transparent;
   border-radius: 2rem;
   font-weight: bold;
-  color: var(--white);
+  color: white;
+}
+
+input[type=submit] {
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  font-weight: bold;
+  color: white;
 }
 
 .basic-button {
@@ -626,6 +635,26 @@ button {
 .contact-form {
   margin: 0;
   margin-top: 3rem;
+}
+
+.name-validation {
+  color: red;
+  visibility: hidden;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.email-validation {
+  color: red;
+  visibility: hidden;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.checkbox-validation {
+  color: red;
+  visibility: hidden;
+  margin-top: 10px;
 }
 
 .contact-form label {
