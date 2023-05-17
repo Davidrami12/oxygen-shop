@@ -22,8 +22,6 @@ document.addEventListener('scroll', percentageScroller);
 
 /* Crear un botón ‘Return to the top’ al fondo que espera 200 milisegundos y 
 vuelve al principio de la página con una animación suave */
-const returnToTopButton = document.querySelector('.returnToTop')
-
 const returnToTop = () => {
     if (window.scrollY > 0) {
         window.scrollTo({ 
@@ -33,6 +31,7 @@ const returnToTop = () => {
 };
 
 const showTopButton = () => {
+    const returnToTopButton = document.querySelector('.returnToTop')
     const scrolledPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 
     if (scrolledPercentage > 20) {
