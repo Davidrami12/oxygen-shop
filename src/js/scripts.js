@@ -1,3 +1,5 @@
+// El menú de la vista mobile que aparece solo cuando haces clic en el botón hamburguesa
+ 
 
 
 
@@ -42,12 +44,11 @@ const showTopButton = () => {
     }
 
     returnToTopButton.addEventListener('click', () => {
-        returnToTopButton.style.opacity = '0';
         setTimeout(returnToTop, 200);
     });
 };
 
-window.addEventListener('scroll', showTopButton);
+document.addEventListener('scroll', showTopButton);
 
 
 
