@@ -431,6 +431,23 @@ nav {
   text-align: center;
 }
 
+.currency-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.currency-selector {
+  align-self: center;
+  padding: 0.5rem;
+  border: 0;
+  border-bottom: 4px solid #08A6E4;
+  text-align: center;
+  width: 200px;
+  background-color: transparent;
+  font-size: 16px;
+}
+
 .prices {
   margin: 1rem auto;
   max-width: 422px;
