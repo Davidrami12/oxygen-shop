@@ -1,5 +1,21 @@
 // Replace burger menu from CSS to JS functionality
- 
+const checkboxBurger = document.querySelector('#toggler')
+const menu = document.querySelector('.menu')
+const iconBurger = document.querySelector('#toggler-label')
+
+const burgerMenu = () => {
+    if(checkboxBurger.checked){
+        menu.style.position = 'relative';
+        menu.style.visibility = 'visible';
+        iconBurger.innerHTML = "&#x26CC;"
+    }else{
+        menu.style.position = 'absolute';
+        menu.style.visibility = 'hidden';
+        iconBurger.innerHTML = "&#9776;"
+    }
+}
+
+checkboxBurger.addEventListener("click", burgerMenu)
 
 
 
@@ -99,7 +115,6 @@ const formValidation = (e) => {
     }
 
     return flag
-    //console.log("Flag: " + flag)
 }
 
 document.querySelector('.contact-form').addEventListener('submit', formValidation)

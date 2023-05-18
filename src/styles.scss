@@ -127,8 +127,8 @@ nav {
 }
 
 #toggler:checked~.menu {
-  visibility: visible;
-  position: relative;
+  //visibility: visible;
+  //position: relative;
 }
 
 .list {
@@ -878,7 +878,6 @@ footer{
   nav{
     display: flex;
     align-items: center;
-    
   }
 
 

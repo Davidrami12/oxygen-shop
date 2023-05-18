@@ -114,11 +114,6 @@ nav {
   display: none;
 }
 
-#toggler:checked ~ .menu {
-  visibility: visible;
-  position: relative;
-}
-
 .list {
   justify-content: flex-end;
   flex-direction: column;
