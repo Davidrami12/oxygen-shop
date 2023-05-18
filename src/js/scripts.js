@@ -3,7 +3,7 @@
 
 
 
-// Un elemento ‘percentage scroller’
+// Elemento ‘percentage scroller’
 const percentageScroller = () => {
     const bar = document.querySelector('#progress-bar');
     const bodyHeight = document.body.scrollHeight - window.innerHeight;
@@ -54,47 +54,59 @@ document.addEventListener('scroll', showTopButton);
 
 
 /* Implementar validación en el formulario. El nombre tiene que tener entre 2 y 100 letras, 
-la dirección de correo electrónico tiene que ser válida (https://www.emailregex.com/) y 
-tienen que hacer el checkbox. Si un campo no es válido, cambiar el color de su border a rojo */
+la dirección de correo electrónico tiene que ser válida y tienen que hacer el checkbox. 
+Si un campo no es válido, cambiar el color de su border a rojo */
+
+let name = document.querySelector('.name')
+let email = document.querySelector('.email')
+let checkbox = document.querySelector('.form-checkbox')
+
 const formValidation = (e) => {
     e.preventDefault();
 
-    let nameRegex = /^[A-Za-z]{2,100}$/;
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    let flag = true;
 
-    let nameValue = document.querySelector('.name').value
-    let emailValue = document.querySelector('.email').value
+    const nameRegex = /^[A-Za-z]{2,100}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
     let nameTextError = document.querySelector('.name-validation')
     let emailTextError = document.querySelector('.email-validation')
     let checkboxTextError = document.querySelector('.checkbox-validation')
-    let name = document.querySelector('.name')
-    let email = document.querySelector('.email')
-    let checkbox = document.querySelector('.form-checkbox')
+    
     
     // Name validation
-    if(!nameRegex.test(nameValue)){
+    if(!nameRegex.test(name.value)){
         nameTextError.style.visibility = "visible"
         name.style.borderBottom = "1px solid red"
+        flag = false
     }else{
         nameTextError.style.visibility = "hidden"
         name.style.borderBottom = "1px solid #08A6E4"
+        flag = true
     }
 
     // Email validation
-    if(!emailRegex.test(emailValue)){
+    if(!emailRegex.test(email.value)){
         emailTextError.style.visibility = "visible"
         email.style.borderBottom = "1px solid red"
+        flag = false
     }else{
         emailTextError.style.visibility = "hidden"
         email.style.borderBottom = "1px solid #08A6E4"
+        flag = true
     }
 
     // Checkbox validation
     if(!checkbox.checked){
         checkboxTextError.style.visibility = "visible"
+        flag = false
     }else{
         checkboxTextError.style.visibility = "hidden"
+        flag = true
     }
+
+    return flag
+    //console.log("Flag: " + flag)
 }
 
 document.querySelector('.contact-form').addEventListener('submit', formValidation)
@@ -103,12 +115,42 @@ document.querySelector('.contact-form').addEventListener('submit', formValidatio
 
 
 
-
-
-
-
 /* Recoger los datos del formulario y mandarselos a un servidor JSON de testing 
 como este https://jsonplaceholder.typicode.com/guide/ con fetch() */
+document.querySelector('.contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+    const formData = {
+        name: name.value,
+        email: email.value,
+        checkbox: checkbox.checked,
+    }
+
+    const flag = formValidation(e)
+    if(flag != true){
+        return; // 
+    }
+
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+        })
+
+        const data = await response.json();
+        console.log('Server response:', data);
+
+    } catch (error) {
+        console.error('Server error:', error);
+    }
+
+    
+})
+
+
 
 
 
