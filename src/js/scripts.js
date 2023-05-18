@@ -1,9 +1,10 @@
 // El menú de la vista mobile que aparece solo cuando haces clic en el botón hamburguesa
+// Burger menu
  
 
 
 
-// Elemento ‘percentage scroller’
+// Percentage scroller element
 const percentageScroller = () => {
     const bar = document.querySelector('#progress-bar');
     const bodyHeight = document.body.scrollHeight - window.innerHeight;
@@ -18,10 +19,7 @@ document.addEventListener('scroll', percentageScroller);
 
 
 
-
-
-/* Crear un botón ‘Return to the top’ al fondo que espera 200 milisegundos y 
-vuelve al principio de la página con una animación suave */
+// Return to the top button (200ms wait time and smooth animation)
 const returnToTop = () => {
     if (window.scrollY > 0) {
         window.scrollTo({ 
@@ -51,12 +49,8 @@ document.addEventListener('scroll', showTopButton);
 
 
 
-
-
-/* Implementar validación en el formulario. El nombre tiene que tener entre 2 y 100 letras, 
-la dirección de correo electrónico tiene que ser válida y tienen que hacer el checkbox. 
-Si un campo no es válido, cambiar el color de su border a rojo */
-
+// Form validation: Name: 2-100 characters. Email must be valid. Checkbox must be checked
+// Adding styles and red borders for error text validation
 let name = document.querySelector('.name')
 let email = document.querySelector('.email')
 let checkbox = document.querySelector('.form-checkbox')
@@ -64,7 +58,7 @@ let checkbox = document.querySelector('.form-checkbox')
 const formValidation = (e) => {
     e.preventDefault();
 
-    let flag = true;
+    let flag = true; // Flag to prevent sending incorrect data
 
     const nameRegex = /^[A-Za-z]{2,100}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -113,10 +107,7 @@ document.querySelector('.contact-form').addEventListener('submit', formValidatio
 
 
 
-
-
-/* Recoger los datos del formulario y mandarselos a un servidor JSON de testing 
-como este https://jsonplaceholder.typicode.com/guide/ con fetch() */
+// Receive form data and send it to a JSON test server using fetch()
 document.querySelector('.contact-form').addEventListener('submit', async (e) => {
     e.preventDefault()
 
@@ -152,21 +143,47 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 
 
 
-/* Crear un popup (/modal) de ‘Subscribe to our newsletter’ que aparece 
-después de 5 segundos, o cuando el usuario baja 25% de la página */
-
-
-
-
-
-/* Añadir un selector de moneda (EUR, USD, GBP), obtener los tipos de 
-cambio de esta API https://github.com/fawazahmed0/currency-api#readme 
-(https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json) */
+// Popup ‘Subscribe to our newsletter’ after 5s or 25% scrolled
 
 
 
 
 
 
-/* Crear un ‘Slider’ con esta funcionalidad (botones prev/next, 
-puntos para las imágenes individuales, avanza automáticamente): */
+
+// Currency selector (EUR, USD, GBP) using an API
+const basicPrice = document.querySelector('.basic-price');
+const professionalPrice = document.querySelector('.professional-price');
+const premiumPrice = document.querySelector('.premium-price');
+const currencySelected = document.querySelector('.currency-selector')
+
+async function fetchExchangeRates(currency) {
+    try {
+      const response = await fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`);
+      const data = await response.json();
+      console.log('Server response:', data);
+
+    } catch (error) {
+      console.error('Error al obtener los tipos de cambio:', error);
+      return null;
+    }
+  }
+
+const setCurrency = () => {
+    const currencySelectedValue = document.querySelector('.currency-selector').value
+    console.log(currencySelectedValue)
+
+    async fetchExangeRates(currency)
+
+}
+
+
+document.querySelector('.currency-selector').addEventListener('change', setCurrency)
+
+
+
+
+
+
+
+// ‘Slider’ with prev/next buttons, individual images, automatic move
