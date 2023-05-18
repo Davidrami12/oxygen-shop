@@ -128,7 +128,7 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 
     const flag = formValidation(e)
     if(flag != true){
-        return; // 
+        return; // Prevent sending data to server
     }
 
     try {
@@ -146,12 +146,7 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
     } catch (error) {
         console.error('Server error:', error);
     }
-
-    
 })
-
-
-
 
 
 
@@ -167,3 +162,11 @@ después de 5 segundos, o cuando el usuario baja 25% de la página */
 /* Añadir un selector de moneda (EUR, USD, GBP), obtener los tipos de 
 cambio de esta API https://github.com/fawazahmed0/currency-api#readme 
 (https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json) */
+
+
+
+
+
+
+/* Crear un ‘Slider’ con esta funcionalidad (botones prev/next, 
+puntos para las imágenes individuales, avanza automáticamente): */
