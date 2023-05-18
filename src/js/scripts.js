@@ -132,10 +132,10 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
         })
 
         const data = await response.json();
-        console.log('Server response:', data);
+        console.log('Server response: ', data);
 
     } catch (error) {
-        console.error('Server error:', error);
+        console.error('Server error: ', error);
     }
 })
 
@@ -159,26 +159,48 @@ const currencySelected = document.querySelector('.currency-selector')
 
 async function fetchExchangeRates(currency) {
     try {
-      const response = await fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`);
-      const data = await response.json();
-      console.log('Server response:', data);
+        const response = await fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency.toLowerCase()}.json`);
+        const data = await response.json();
+        //return data;
+        console.log('Server response: ', data);
 
     } catch (error) {
-      console.error('Error al obtener los tipos de cambio:', error);
-      return null;
+        console.error('Server error: ', error);
     }
-  }
-
-const setCurrency = () => {
-    const currencySelectedValue = document.querySelector('.currency-selector').value
-    console.log(currencySelectedValue)
-
-    async fetchExangeRates(currency)
-
 }
 
+currencySelected.addEventListener('change', async () => {
+    let currencySelectedValue = currencySelected.value;
+  
+    try {
+        // Obtener los tipos de cambio de la API
+        const exchangeRates = await fetchExchangeRates(currencySelectedValue);
 
-document.querySelector('.currency-selector').addEventListener('change', setCurrency)
+        if(exchangeRates == "USD"){
+            basicPrice.innerHTML = `$${exchangeRates.USD}`;
+            professionalPrice.innerHTML = `$${exchangeRates.USD * 25}`;
+            premiumPrice.innerHTML = `$${exchangeRates.USD * 60}`;
+
+        }else if(exchangeRates == "EUR"){
+            basicPrice.innerHTML
+            professionalPrice.innerHTML
+            premiumPrice.innerHTML
+
+        }else if(exchangeRates == "GBP"){
+            basicPrice.innerHTML
+            professionalPrice.innerHTML
+            premiumPrice.innerHTML
+
+        }else{
+            console.error('Datos recibidos no tienen la estructura esperada');
+        }
+
+    } catch (error) {
+        console.error('Server error: ', error);
+    }
+});
+
+//document.querySelector('.currency-selector').addEventListener('change', setCurrency)
 
 
 
