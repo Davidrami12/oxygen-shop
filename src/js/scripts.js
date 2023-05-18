@@ -19,6 +19,7 @@ const burgerMenu = () => {
             if(window.innerWidth>1000){
                 menu.style.position = 'relative';
                 menu.style.visibility = 'visible';
+                iconBurger.innerHTML = "☰"
             }else{
                 menu.style.position = 'absolute';
                 menu.style.visibility = 'hidden';
