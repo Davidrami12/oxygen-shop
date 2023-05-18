@@ -33,7 +33,6 @@ header{
   top: 0;
   left: 0;
   background-color: $blue;
-  //width: 100%;
   height: 6px;
   z-index: 3;
 }
@@ -126,10 +125,10 @@ nav {
   display: none;
 }
 
-#toggler:checked~.menu {
-  //visibility: visible;
-  //position: relative;
-}
+/*#toggler:checked~.menu {
+  visibility: visible;
+  position: relative;
+}*/
 
 .list {
   justify-content: flex-end;
@@ -849,7 +848,7 @@ footer{
     visibility: visible;
   }
   
-  #toggler:checked~.menu {
+  /*#toggler:checked~.menu {
     visibility: visible;
     position: relative;
   }
@@ -857,7 +856,7 @@ footer{
   .menu{
     visibility: visible;
     position: relative;
-  }
+  }*/
 
   .list li{
     margin-bottom: -5px;
