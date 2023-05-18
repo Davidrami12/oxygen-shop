@@ -157,50 +157,45 @@ const professionalPrice = document.querySelector('.professional-price');
 const premiumPrice = document.querySelector('.premium-price');
 const currencySelected = document.querySelector('.currency-selector')
 
-async function fetchExchangeRates(currency) {
+async function fetchCurrencyApi() {
     try {
-        const response = await fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency.toLowerCase()}.json`);
+        const response = await fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json');
         const data = await response.json();
-        //return data;
-        console.log('Server response: ', data);
+        return data;
 
     } catch (error) {
         console.error('Server error: ', error);
     }
 }
 
-currencySelected.addEventListener('change', async () => {
-    let currencySelectedValue = currencySelected.value;
-  
-    try {
-        // Obtener los tipos de cambio de la API
-        const exchangeRates = await fetchExchangeRates(currencySelectedValue);
+fetchCurrencyApi().then((data) => {
+    currencySelected.addEventListener("change", (e) => {
+        switch (e.target.value) {
+            case "USD":
+                basicPrice.innerHTML = "$0";
+                professionalPrice.innerHTML = "$25";
+                premiumPrice.innerHTML = "$60";
+                break;
 
-        if(exchangeRates == "USD"){
-            basicPrice.innerHTML = `$${exchangeRates.USD}`;
-            professionalPrice.innerHTML = `$${exchangeRates.USD * 25}`;
-            premiumPrice.innerHTML = `$${exchangeRates.USD * 60}`;
+            case "EUR":
+                basicPrice.innerHTML = Math.round(0 * (data.usd.eur)) + "€";
+                professionalPrice.innerHTML = Math.round(25 * (data.usd.eur)) + "€";
+                premiumPrice.innerHTML = Math.round(60 * (data.usd.eur)) + "€";
+                break;
 
-        }else if(exchangeRates == "EUR"){
-            basicPrice.innerHTML
-            professionalPrice.innerHTML
-            premiumPrice.innerHTML
+            case "GBP":
+                basicPrice.innerHTML = "£" + Math.round(0 * (data.usd.gbp));
+                professionalPrice.innerHTML = "£" + Math.round(25 * (data.usd.gbp));
+                premiumPrice.innerHTML = "£" + Math.round(60 * (data.usd.gbp));
+                break;
 
-        }else if(exchangeRates == "GBP"){
-            basicPrice.innerHTML
-            professionalPrice.innerHTML
-            premiumPrice.innerHTML
-
-        }else{
-            console.error('Datos recibidos no tienen la estructura esperada');
+            default:
+                break;
         }
-
-    } catch (error) {
-        console.error('Server error: ', error);
-    }
+    });
 });
 
-//document.querySelector('.currency-selector').addEventListener('change', setCurrency)
+
 
 
 
