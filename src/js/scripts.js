@@ -1,21 +1,33 @@
 // Replace burger menu from CSS to JS functionality
-const checkboxBurger = document.querySelector('#toggler')
 const menu = document.querySelector('.menu')
 const iconBurger = document.querySelector('#toggler-label')
 
 const burgerMenu = () => {
-    if(checkboxBurger.checked){
+    
+    if(iconBurger.innerHTML == "☰"){
         menu.style.position = 'relative';
         menu.style.visibility = 'visible';
-        iconBurger.innerHTML = "&#x26CC;"
-    }else{
+        iconBurger.innerHTML = "⛌"
+        
+    } else if(iconBurger.innerHTML == "⛌"){
         menu.style.position = 'absolute';
         menu.style.visibility = 'hidden';
-        iconBurger.innerHTML = "&#9776;"
+        iconBurger.innerHTML = "☰"
+        
+        // Control on desktop px 
+        window.onresize = () => {
+            if(window.innerWidth>1000){
+                menu.style.position = 'relative';
+                menu.style.visibility = 'visible';
+            }else{
+                menu.style.position = 'absolute';
+                menu.style.visibility = 'hidden';
+            }
+        }   
     }
 }
 
-checkboxBurger.addEventListener("click", burgerMenu)
+iconBurger.addEventListener("click", burgerMenu)
 
 
 

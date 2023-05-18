@@ -114,10 +114,11 @@ nav {
   display: none;
 }
 
-/*#toggler:checked~.menu {
+#toggler:checked ~ .menu {
   visibility: visible;
   position: relative;
-}*/
+}
+
 .list {
   justify-content: flex-end;
   flex-direction: column;
@@ -798,15 +799,14 @@ footer {
   #toggler {
     visibility: visible;
   }
-  /*#toggler:checked~.menu {
+  #toggler:checked ~ .menu {
     visibility: visible;
     position: relative;
   }
-
-  .menu{
+  .menu {
     visibility: visible;
     position: relative;
-  }*/
+  }
   .list li {
     margin-bottom: -5px;
   }
