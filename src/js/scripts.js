@@ -1,5 +1,4 @@
-// El menú de la vista mobile que aparece solo cuando haces clic en el botón hamburguesa
-// Burger menu
+// Replace burger menu from CSS to JS functionality
  
 
 
@@ -194,10 +193,6 @@ fetchCurrencyApi().then((data) => {
         }
     });
 });
-
-
-
-
 
 
 
