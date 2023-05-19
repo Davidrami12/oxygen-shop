@@ -446,6 +446,7 @@ nav {
   width: 200px;
   background-color: transparent;
   font-size: 16px;
+  outline: none;
 }
 
 .prices {
