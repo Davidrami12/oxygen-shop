@@ -7,6 +7,7 @@
     <title>OXYGEN Shop</title>
     <link rel="stylesheet" type="text/css" href="src/styles.css">
 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -31,6 +32,8 @@
             </div>
         </nav>
     </header>
+
+    <div id="progress-bar"></div>
     
     <section class="content">
 
@@ -116,6 +119,14 @@
         <article class="pricing" id="pricing">
             <h1>Pricing</h1>
 
+            <div class="currency-container">
+                <select class="currency-selector">
+                    <option class="usd">USD</option>
+                    <option class="eur">EUR</option>
+                    <option class="gbp">GBP</option>
+                </select>
+            </div>
+
             <div class="prices">
                 <div class="basic">
                     <div class="price-info">
@@ -187,11 +198,13 @@
             
             
 
-            <form class="contact-form">
+            <form class="contact-form" action="" method="POST">
                 <label for="name">NAME</label>
                 <input type="text" class="name" id="name" autocomplete="NAME"/>
+                <p class="name-validation">Please enter a valid name</p>
                 <label for="email">EMAIL</label>
                 <input type="text" class="email" id="email" autocomplete="EMAIL"/>
+                <p class="email-validation">Please enter a valid email</p>
                 
                 <div class="checkbox-div">
                     <input type="checkbox" class="form-checkbox" id="checkbox"/>
@@ -202,14 +215,17 @@
                         processing of personal data and on the free movement of such data, and repealing 
                         Directive 95/46/EC (Data Protection Directive)
                     </p>
+                    <p class="checkbox-validation">Please check before continue</p>
                 </div>
                 <div class="container-button">
-                    <button class="form-button">Send</button>
+                    <input type="submit" class="form-button" value="Send"></input>
                 </div>
             </form>
             
         </article>
     </section>
+
+    <button class="returnToTop" id="returnToTop"></button>
 
     <footer>
         <div class="footer-info">
@@ -225,6 +241,8 @@
             </a>
         </div>
     </footer>
+
+    <script src="src/js/scripts.js"></script>
 
 </body>
 </html>

@@ -21,6 +21,15 @@ header {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
 }
 
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #08A6E4;
+  height: 6px;
+  z-index: 3;
+}
+
 .logo {
   color: #08A6E4;
   font-family: "Raleway", serif;
@@ -422,6 +431,23 @@ nav {
   text-align: center;
 }
 
+.currency-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.currency-selector {
+  align-self: center;
+  padding: 0.5rem;
+  border: 0;
+  border-bottom: 4px solid #08A6E4;
+  text-align: center;
+  width: 200px;
+  background-color: transparent;
+  font-size: 16px;
+}
+
 .prices {
   margin: 1rem auto;
   max-width: 422px;
@@ -553,7 +579,16 @@ button {
   border: 1px solid transparent;
   border-radius: 2rem;
   font-weight: bold;
-  color: var(--white);
+  color: white;
+}
+
+input[type=submit] {
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  font-weight: bold;
+  color: white;
 }
 
 .basic-button {
@@ -619,6 +654,26 @@ button {
   margin-top: 3rem;
 }
 
+.name-validation {
+  color: red;
+  visibility: hidden;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.email-validation {
+  color: red;
+  visibility: hidden;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.checkbox-validation {
+  color: red;
+  visibility: hidden;
+  margin-top: 10px;
+}
+
 .contact-form label {
   display: block;
   width: 100%;
@@ -680,6 +735,22 @@ button {
   transform: scale(1.05);
   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
   transition: 0.5s;
+}
+
+.returnToTop {
+  cursor: pointer;
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  background: url(img/icons/returnToTop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  transition: 1s;
+  z-index: 999;
+  visibility: hidden;
 }
 
 footer {
