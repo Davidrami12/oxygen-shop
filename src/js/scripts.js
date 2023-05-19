@@ -16,7 +16,7 @@ const burgerMenu = () => {
         
         // Control on desktop px 
         window.onresize = () => {
-            if(window.innerWidth > 1000){
+            if(window.innerWidth>1000){
                 menu.style.position = 'relative';
                 menu.style.visibility = 'visible';
                 iconBurger.innerHTML = "☰"
@@ -227,7 +227,3 @@ fetchCurrencyApi().then((data) => {
 
 
 // ‘Slider’ with prev/next buttons, individual images, automatic move
-const sliderDiv = document.querySelector('#slider')
-class Slider {
-
-}
