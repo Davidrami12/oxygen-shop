@@ -446,6 +446,7 @@ nav {
   width: 200px;
   background-color: transparent;
   font-size: 16px;
+  outline: none;
 }
 
 .prices {
@@ -694,6 +695,7 @@ input[type=submit] {
   margin-bottom: 2rem;
   margin-top: 1rem;
   max-width: 440px;
+  outline: none;
 }
 
 .checkbox-div {
