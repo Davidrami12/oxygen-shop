@@ -1,6 +1,6 @@
 # oxygen-shop
 
-Página web responsive de Oxygen Shop maquetada en HTML, CSS y Sass
+Página web responsive de Oxygen Shop maquetada en HTML, CSS con Sass y BEM, y JavaScript. 
 
 Visualización del proyecto en el siguiente enlace: https://davidrami12.github.io/oxygen-shop/
 
