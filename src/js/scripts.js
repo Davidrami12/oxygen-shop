@@ -168,8 +168,6 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 
 
 
-
-
 // Popup ‘Subscribe to our newsletter’ after 5s or 25% scrolled
 
 
@@ -224,6 +222,54 @@ fetchCurrencyApi().then((data) => {
 
 
 
-
-
 // ‘Slider’ with prev/next buttons, individual images, automatic move
+class Slider {
+    constructor(slider) {
+        this.slider = document.querySelector('#slider');
+        this.images = this.slider.querySelectorAll('.slider-img');
+        this.dots = this.slider.querySelectorAll('.dot');
+        this.prevButton = this.slider.querySelector('.prev-button');
+        this.nextButton = this.slider.querySelector('.next-button');
+        
+        this.currentIndex = 0;
+    
+        this.prevButton.addEventListener('click', () => this.showPreviousImage());
+        this.nextButton.addEventListener('click', () => this.showNextImage());
+    
+        // Automatic advance
+        setInterval(() => {
+            this.showNextImage();
+        }, 3000);
+
+        this.updateSlider()
+    }
+  
+    showPreviousImage() {
+        this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+        this.updateSlider();
+    }
+  
+    showNextImage() {
+        this.currentIndex = (this.currentIndex + 1) % this.images.length;
+        this.updateSlider();
+    }
+  
+    updateSlider() {
+        for (let i = 0; i < this.images.length; i++) {
+            // Set and modify attributes for img and dots
+            if (i === this.currentIndex) { 
+                this.images[i].style.display = 'block';
+                this.dots[i].classList.add('active');
+
+            } else {
+                this.images[i].style.display = 'none';
+                this.dots[i].classList.remove('active');
+        
+            }
+        }
+    }
+
+}
+  
+// Create slider instance with 'slider' ID
+const slider = new Slider('slider');

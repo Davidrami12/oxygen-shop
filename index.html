@@ -120,7 +120,7 @@
             <h1>Pricing</h1>
 
             <div class="currency-container">
-                <select class="currency-selector">
+                <select class="currency-selector" id="currency-selector">
                     <option class="usd">USD</option>
                     <option class="eur">EUR</option>
                     <option class="gbp">GBP</option>
@@ -177,6 +177,30 @@
             </div>
 
         </article>
+
+        <article class="slider-content">
+            <div id="slider">
+                <img src="src/img/1.jpg" alt="" class="slider-img">
+                <img src="src/img/2.jpg" alt="" class="slider-img">
+                <img src="src/img/3.jpg" alt="" class="slider-img">
+                <img src="src/img/4.jpg" alt="" class="slider-img">
+                <img src="src/img/5.jpg" alt="" class="slider-img">
+            
+                <div class="slider-buttons">
+                    <button class="prev-button">&lt;</button>
+                    <button class="next-button">&gt;</button>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </article>
+            
+        
         
         <article class="contact" id="contact">
             <div class="contact-container">
@@ -196,8 +220,6 @@
                 </div>
             </div>
             
-            
-
             <form class="contact-form" action="" method="POST">
                 <label for="name">NAME</label>
                 <input type="text" class="name" id="name" autocomplete="NAME"/>
@@ -221,11 +243,13 @@
                     <input type="submit" class="form-button" value="Send"></input>
                 </div>
             </form>
+
+            <button class="returnToTop" id="returnToTop"></button>
             
         </article>
     </section>
 
-    <button class="returnToTop" id="returnToTop"></button>
+    
 
     <footer>
         <div class="footer-info">
