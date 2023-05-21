@@ -176,6 +176,7 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 
 
 
+
 // Currency selector (EUR, USD, GBP) using an API
 const basicPrice = document.querySelector('.basic-price');
 const professionalPrice = document.querySelector('.professional-price');
@@ -241,6 +242,7 @@ class Slider {
             this.showNextImage();
         }, 3000);
 
+        // Updating images and dots
         this.updateSlider()
     }
   
