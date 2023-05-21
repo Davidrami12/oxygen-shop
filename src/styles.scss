@@ -916,6 +916,7 @@ input[type=submit]{
   background-color: #fff;
   max-width: 500px;
   padding: 40px;
+  text-align: center;
   border-radius: 15px;
   box-shadow: 5px 10px 8px 10px #0000005e;
   position: relative; 
@@ -925,12 +926,18 @@ input[type=submit]{
   text-align: center;
   text-decoration: underline;
   margin-bottom: 12px;
+  margin-bottom: 26px;
+}
+
+.popup-container ul{
+  margin-left: 25px;
+  text-align: left;
 }
 
 .popup-container p {
-  text-align: left;
+  align-self: center;
+  text-align: center;
   margin-top: 10px;
-  margin-bottom: 12px;
   color: #A5A5A5;
   font-size: 12px;
 }
@@ -939,7 +946,7 @@ input[type=submit]{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 35px;
 }
 
 .popup-form input[type="email"] {

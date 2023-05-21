@@ -169,14 +169,8 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 
 
 // Popup ‘Subscribe to our newsletter’ after 5s or 25% scrolled
-document.addEventListener("DOMContentLoaded", function() {
-    var popupOverlay = document.querySelector(".popup-overlay");
-    var closeButton = document.querySelector(".close-button");
 
-    closeButton.addEventListener("click", () => {
-        popupOverlay.style.display = "none";
-    });
-});
+
 
 
 
