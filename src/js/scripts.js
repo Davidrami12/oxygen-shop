@@ -3,7 +3,7 @@ const menu = document.querySelector('.menu')
 const iconBurger = document.querySelector('#toggler-label')
 
 const burgerMenu = () => {
-    
+
     if(iconBurger.innerHTML == "☰"){
         menu.style.position = 'relative';
         menu.style.visibility = 'visible';
@@ -37,14 +37,9 @@ const percentageScroller = () => {
     const bar = document.querySelector('#progress-bar');
     const bodyHeight = document.body.scrollHeight - window.innerHeight;
     const scrolledPercentage = (window.scrollY / bodyHeight) * 100;
-
-    window.addEventListener('scroll', () => {
-        bar.style.width = scrolledPercentage + '%';
-        //console.log(scrolledPercentage.value)
-        return scrolledPercentage
-    });
-
-    
+    bar.style.width = scrolledPercentage + '%';
+        
+    return scrolledPercentage
 };
 
 document.addEventListener('scroll', percentageScroller);
@@ -86,19 +81,17 @@ document.addEventListener('scroll', showTopButton);
 let name = document.querySelector('.name')
 let email = document.querySelector('.email')
 let checkbox = document.querySelector('.form-checkbox')
+const nameRegex = /^[A-Za-z]{2,100}$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const formValidation = (e) => {
     e.preventDefault();
 
-    let flag = true; // Flag to prevent sending incorrect data
-
-    const nameRegex = /^[A-Za-z]{2,100}$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
     let nameTextError = document.querySelector('.name-validation')
     let emailTextError = document.querySelector('.email-validation')
     let checkboxTextError = document.querySelector('.checkbox-validation')
-    
+
+    let flag = false; // Flag to prevent sending incorrect data
     
     // Name validation
     if(!nameRegex.test(name.value)){
@@ -175,71 +168,93 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 // Popup ‘Subscribe to our newsletter’ after 5s or 25% scrolled
 
 const newsletter = document.querySelector('.popup-overlay');
-const newsForm = document.querySelector('.popup-form');
-const newsletterCloseBtn = document.querySelector ('.close-button');
-//const inputNewsletter = document.querySelector ('#input-newsletter');
-//let warningNewsletterEmail = document.getElementById('warning-newsletter-email');
-let emailIsCorrect = false;
-
-
+const popupForm = document.querySelector('.popup-form');
+const closeButton = document.querySelector ('.close-button');
+const popupEmail = document.querySelector ('.popup-email');
+let emailTextError = document.querySelector('.email-validation')
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    percentageScroller()
-    console.log(percentageScroller().scrolledPercentage)
-
-    //console.log((window.localStorage.getItem('newsletterDisplayed').valueOf()))
-
-
-
-
-
-    const scrolledEnough = () => {
-        
+    // Function to show pop up
+    const showNewsletter = () => {
+        if (!window.localStorage.getItem('showNewsletter')){
+            newsletter.style.display = 'flex';
+            window.localStorage.setItem('showNewsletter', 'true');
+        }else{
+            window.localStorage.setItem('showNewsletter', 'false')
+        }
     }
 
-
-
-    setTimeout(()=> {
-        if (!window.localStorage.getItem('newsletterDisplayed')){
-            newsletter.style.display = 'flex';
-            window.localStorage.setItem('newsletterDisplayed', 'true');
-        }else{
-            window.localStorage.setItem('newsletterDisplayed', 'false')
+    // Show newsletter only after scrolling 25% of the page
+    document.addEventListener("scroll", () => {
+        if(percentageScroller() > 25){
+            showNewsletter()
         }
+    })
 
+    // Show newsletter only after 5s
+    setTimeout(()=> {
+        showNewsletter()
     }, 5000)
+        
 
+    // Close newsletter on X button
+    closeButton.addEventListener ('click', () => {
+        newsletter.style.display = 'none';
+    })
+
+    // Close newsletter when pressing Escape
+    window.addEventListener ('keydown', (e) => {
+        if(e.key == 'Escape')
+            newsletter.style.display = 'none'
+    })
+
+    // Close newsletter when click outside 
     newsletter.addEventListener ('click', (e) => {
         if(e.target == newsletter)
             newsletter.style.display = 'none'
-        //e.target === newsletter ? newsletter.style.display = 'none' : null;
     });
     
-    newsletterCloseBtn.addEventListener ('click', () => {
-        newsletter.style.display = 'none';
+    popupForm.addEventListener("submit", async(e) => {
+        e.preventDefault()
+
+        let flag = false
+        
+        // Email validation
+        if(!emailRegex.test(popupEmail.value)){
+            emailTextError.style.visibility = "visible"
+            emailTextError.style.color = "red"
+            popupEmail.style.borderColor = "red"
+            flag = false
+        }else{
+            emailTextError.style.visibility = "hidden"
+            popupEmail.style.border = "1px solid #ccc";
+            flag = true
+        }
+
+        const emailData = {
+            email: popupEmail.value,
+        }
+
+        if(flag){
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(emailData)
+            })
+
+            const data = await response.json();
+            console.log('Server response: ', data);
+        }
+
+
     })
     
-    window.addEventListener ('keyup', (e) => {
-        if(e.key == 'Escape')
-            newsletter.style.display = 'none'
-        
-        //e.key === 'Escape' ? newsletter.style.display = 'none' : null;
-    })
+    
     
 })
-
-/*setTimeout(()=> {
-    if (window.localStorage.getItem('newsletterDisplayed').valueOf() == false){
-        newsletter.style.display ='flex';
-        window.localStorage.setItem('newsletterDisplayed', 'true');
-        console.log ('modal asincrónico')
-    }
-    window.localStorage.setItem('newsletterDisplayed', 'false')
-
-},5000)*/
-
-
 
 
 
