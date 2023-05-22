@@ -166,7 +166,7 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 
 
 // Popup ‘Subscribe to our newsletter’ after 5s or 25% scrolled
-
+// Close pop up when pressing X button, click outside or pressing Escape
 const newsletter = document.querySelector('.popup-overlay');
 const popupForm = document.querySelector('.popup-form');
 const closeButton = document.querySelector ('.close-button');
@@ -249,111 +249,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Server response: ', data);
         }
 
-
     })
     
-    
-    
 })
-
-
-
-/*inputNewsletter.addEventListener ('keyup', ()=>{
-    if (!regexEmail.test(inputNewsletter.value)) {
-        inputNewsletter.style.border = '2px solid red';
-        warningNewsletterEmail.innerHTML = `The email address is not valid`;
-        console.log('desde false', emailIsCorrect)
-    } else {
-        inputNewsletter.style.border = '2px solid green'
-        warningNewsletterEmail.innerHTML = '';
-        emailIsCorrect = true;
-        console.log('desde true', emailIsCorrect)
-    }
-})
-
-newsForm.addEventListener ('submit', (e) => {
-    console.log('Entra al submit');
-    e.preventDefault();
-    if (emailIsCorrect == true) {
-        sendData(url, inputNewsletter.value)
-        console.log('Data is ok') 
-        warningNewsletterEmail.innerHTML = 'Successful subscription';
-        warningNewsletterEmail.style.color = 'green';
-    } else {
-        warningNewsletterEmail.innerHTML = 'The email address is not valid';
-        warningNewsletterEmail.classList.add = 'error';
-        warningNewsletterEmail.style.color = 'red';
-    }
-})*/
-
-
-/*document.addEventListener('DOMContentLoaded', function () {
-    var popupOverlay = document.querySelector('.popup-overlay');
-    var closeButton = document.querySelector('.close-button');
-    var popupForm = document.querySelector('.popup-form');
-    var emailInput = document.querySelector('.email');
-
-    // Check if the popup should be displayed based on localStorage
-    var isPopupClosed = localStorage.getItem('newsletterPopupClosed');
-    if (!isPopupClosed) {
-        // Show the popup after 5 seconds
-        setTimeout(function () {
-            popupOverlay.style.display = 'flex';
-        }, 5000);
-    }
-
-    // Close the popup when the close button is clicked
-    closeButton.addEventListener('click', function () {
-        popupOverlay.style.display = 'none';
-        // Save the popup closed state in localStorage
-        localStorage.setItem('newsletterPopupClosed', true);
-    });
-
-    // Close the popup when clicked outside the modal
-    window.addEventListener('click', function (event) {
-        if (event.target === popupOverlay) {
-            popupOverlay.style.display = 'none';
-            // Save the popup closed state in localStorage
-            localStorage.setItem('newsletterPopupClosed', true);
-        }
-    });
-
-    // Close the popup when ESC key is pressed
-    window.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
-            popupOverlay.style.display = 'none';
-            // Save the popup closed state in localStorage
-            localStorage.setItem('newsletterPopupClosed', true);
-        }
-    });
-
-    // Validate and submit the form
-    popupForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        var email = emailInput.value;
-        if (validateEmail(email)) {
-            // Send the email to the server (you'll need to implement this part)
-            // ...
-
-            // Close the popup after submitting the form
-            popupOverlay.style.display = 'none';
-            // Save the popup closed state in localStorage
-            localStorage.setItem('newsletterPopupClosed', true);
-        } else {
-            alert('Please enter a valid email address.');
-        }
-    });
-
-    // Email validation function
-    function validateEmail(email) {
-        var re = /\S+@\S+\.\S+/;
-        return re.test(email);
-    }
-});*/
-
-
-
-
 
 
 
