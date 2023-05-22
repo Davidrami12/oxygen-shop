@@ -171,7 +171,7 @@ const newsletter = document.querySelector('.popup-overlay');
 const popupForm = document.querySelector('.popup-form');
 const closeButton = document.querySelector ('.close-button');
 const popupEmail = document.querySelector ('.popup-email');
-let emailTextError = document.querySelector('.email-validation')
+let emailTextError = document.querySelector('.popup-email-validation')
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -223,12 +223,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Email validation
         if(!emailRegex.test(popupEmail.value)){
             emailTextError.style.visibility = "visible"
-            emailTextError.style.color = "red"
             popupEmail.style.borderColor = "red"
             flag = false
         }else{
             emailTextError.style.visibility = "hidden"
             popupEmail.style.border = "1px solid #ccc";
+            newsletter.style.display = 'none'; // Close newsletter popup
             flag = true
         }
 

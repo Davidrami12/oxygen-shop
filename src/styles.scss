@@ -938,7 +938,19 @@ input[type=submit]{
   text-align: left;
 }
 
-.popup-container p {
+.popup-email-validation{
+  align-self: center;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: red;
+  
+  visibility: hidden;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.popup-privacy{
   align-self: center;
   text-align: center;
   margin-top: 10px;
@@ -953,13 +965,15 @@ input[type=submit]{
   margin-top: 35px;
 }
 
-.popup-form input[type="email"] {
+.popup-email {
   padding: 10px;
   width: 70%;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
 }
+
+
 
 .popup-form input[type="submit"] {
   background-color: $blue;
@@ -996,6 +1010,8 @@ input[type=submit]{
   transition: 0.3s;
   
 }
+
+
 
 // FOOTER
 
