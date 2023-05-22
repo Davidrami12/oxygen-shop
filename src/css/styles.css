@@ -565,13 +565,13 @@ nav {
 }
 
 .price-list-item-checkmark {
-  list-style-image: url(img/icons/checkbox.svg);
+  list-style-image: url(../img/icons/checkbox.svg);
   margin-top: 0;
   margin: 20px auto;
 }
 
 .price-list-item-crossmark {
-  list-style-image: url(img/icons/cross.svg);
+  list-style-image: url(../img/icons/cross.svg);
   margin-top: 0;
   margin: 20px auto;
 }
