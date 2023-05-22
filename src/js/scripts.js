@@ -3,7 +3,7 @@ const menu = document.querySelector('.menu')
 const iconBurger = document.querySelector('#toggler-label')
 
 const burgerMenu = () => {
-    
+
     if(iconBurger.innerHTML == "☰"){
         menu.style.position = 'relative';
         menu.style.visibility = 'visible';
@@ -36,11 +36,10 @@ iconBurger.addEventListener("click", burgerMenu)
 const percentageScroller = () => {
     const bar = document.querySelector('#progress-bar');
     const bodyHeight = document.body.scrollHeight - window.innerHeight;
-
-    window.addEventListener('scroll', () => {
-        const scrolledPercentage = (window.scrollY / bodyHeight) * 100;
-        bar.style.width = scrolledPercentage + '%';
-    });
+    const scrolledPercentage = (window.scrollY / bodyHeight) * 100;
+    bar.style.width = scrolledPercentage + '%';
+        
+    return scrolledPercentage
 };
 
 document.addEventListener('scroll', percentageScroller);
@@ -82,19 +81,17 @@ document.addEventListener('scroll', showTopButton);
 let name = document.querySelector('.name')
 let email = document.querySelector('.email')
 let checkbox = document.querySelector('.form-checkbox')
+const nameRegex = /^[A-Za-z]{2,100}$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const formValidation = (e) => {
     e.preventDefault();
 
-    let flag = true; // Flag to prevent sending incorrect data
-
-    const nameRegex = /^[A-Za-z]{2,100}$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
     let nameTextError = document.querySelector('.name-validation')
     let emailTextError = document.querySelector('.email-validation')
     let checkboxTextError = document.querySelector('.checkbox-validation')
-    
+
+    let flag = false; // Flag to prevent sending incorrect data
     
     // Name validation
     if(!nameRegex.test(name.value)){
@@ -170,6 +167,189 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 
 // Popup ‘Subscribe to our newsletter’ after 5s or 25% scrolled
 
+const newsletter = document.querySelector('.popup-overlay');
+const popupForm = document.querySelector('.popup-form');
+const closeButton = document.querySelector ('.close-button');
+const popupEmail = document.querySelector ('.popup-email');
+let emailTextError = document.querySelector('.popup-email-validation')
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Function to show pop up
+    const showNewsletter = () => {
+        if (!window.localStorage.getItem('showNewsletter')){
+            newsletter.style.display = 'flex';
+            window.localStorage.setItem('showNewsletter', 'true');
+        }else{
+            window.localStorage.setItem('showNewsletter', 'false')
+        }
+    }
+
+    // Show newsletter only after scrolling 25% of the page
+    document.addEventListener("scroll", () => {
+        if(percentageScroller() > 25){
+            showNewsletter()
+        }
+    })
+
+    // Show newsletter only after 5s
+    setTimeout(()=> {
+        showNewsletter()
+    }, 5000)
+        
+
+    // Close newsletter on X button
+    closeButton.addEventListener ('click', () => {
+        newsletter.style.display = 'none';
+    })
+
+    // Close newsletter when pressing Escape
+    window.addEventListener ('keydown', (e) => {
+        if(e.key == 'Escape')
+            newsletter.style.display = 'none'
+    })
+
+    // Close newsletter when click outside 
+    newsletter.addEventListener ('click', (e) => {
+        if(e.target == newsletter)
+            newsletter.style.display = 'none'
+    });
+    
+    popupForm.addEventListener("submit", async(e) => {
+        e.preventDefault()
+
+        let flag = false
+        
+        // Email validation
+        if(!emailRegex.test(popupEmail.value)){
+            emailTextError.style.visibility = "visible"
+            popupEmail.style.borderColor = "red"
+            flag = false
+        }else{
+            emailTextError.style.visibility = "hidden"
+            popupEmail.style.border = "1px solid #ccc";
+            newsletter.style.display = 'none'; // Close newsletter popup
+            flag = true
+        }
+
+        const emailData = {
+            email: popupEmail.value,
+        }
+
+        if(flag){
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(emailData)
+            })
+
+            const data = await response.json();
+            console.log('Server response: ', data);
+        }
+
+
+    })
+    
+    
+    
+})
+
+
+
+/*inputNewsletter.addEventListener ('keyup', ()=>{
+    if (!regexEmail.test(inputNewsletter.value)) {
+        inputNewsletter.style.border = '2px solid red';
+        warningNewsletterEmail.innerHTML = `The email address is not valid`;
+        console.log('desde false', emailIsCorrect)
+    } else {
+        inputNewsletter.style.border = '2px solid green'
+        warningNewsletterEmail.innerHTML = '';
+        emailIsCorrect = true;
+        console.log('desde true', emailIsCorrect)
+    }
+})
+
+newsForm.addEventListener ('submit', (e) => {
+    console.log('Entra al submit');
+    e.preventDefault();
+    if (emailIsCorrect == true) {
+        sendData(url, inputNewsletter.value)
+        console.log('Data is ok') 
+        warningNewsletterEmail.innerHTML = 'Successful subscription';
+        warningNewsletterEmail.style.color = 'green';
+    } else {
+        warningNewsletterEmail.innerHTML = 'The email address is not valid';
+        warningNewsletterEmail.classList.add = 'error';
+        warningNewsletterEmail.style.color = 'red';
+    }
+})*/
+
+
+/*document.addEventListener('DOMContentLoaded', function () {
+    var popupOverlay = document.querySelector('.popup-overlay');
+    var closeButton = document.querySelector('.close-button');
+    var popupForm = document.querySelector('.popup-form');
+    var emailInput = document.querySelector('.email');
+
+    // Check if the popup should be displayed based on localStorage
+    var isPopupClosed = localStorage.getItem('newsletterPopupClosed');
+    if (!isPopupClosed) {
+        // Show the popup after 5 seconds
+        setTimeout(function () {
+            popupOverlay.style.display = 'flex';
+        }, 5000);
+    }
+
+    // Close the popup when the close button is clicked
+    closeButton.addEventListener('click', function () {
+        popupOverlay.style.display = 'none';
+        // Save the popup closed state in localStorage
+        localStorage.setItem('newsletterPopupClosed', true);
+    });
+
+    // Close the popup when clicked outside the modal
+    window.addEventListener('click', function (event) {
+        if (event.target === popupOverlay) {
+            popupOverlay.style.display = 'none';
+            // Save the popup closed state in localStorage
+            localStorage.setItem('newsletterPopupClosed', true);
+        }
+    });
+
+    // Close the popup when ESC key is pressed
+    window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            popupOverlay.style.display = 'none';
+            // Save the popup closed state in localStorage
+            localStorage.setItem('newsletterPopupClosed', true);
+        }
+    });
+
+    // Validate and submit the form
+    popupForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var email = emailInput.value;
+        if (validateEmail(email)) {
+            // Send the email to the server (you'll need to implement this part)
+            // ...
+
+            // Close the popup after submitting the form
+            popupOverlay.style.display = 'none';
+            // Save the popup closed state in localStorage
+            localStorage.setItem('newsletterPopupClosed', true);
+        } else {
+            alert('Please enter a valid email address.');
+        }
+    });
+
+    // Email validation function
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+});*/
 
 
 

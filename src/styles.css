@@ -867,7 +867,7 @@ input[type=submit] {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 9999;
@@ -881,7 +881,11 @@ input[type=submit] {
   text-align: center;
   border-radius: 15px;
   box-shadow: 5px 10px 8px 10px rgba(0, 0, 0, 0.368627451);
+  outline: 2px solid grey;
+  outline-offset: -10px;
   position: relative;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .popup-container h2 {
@@ -896,7 +900,18 @@ input[type=submit] {
   text-align: left;
 }
 
-.popup-container p {
+.popup-email-validation {
+  align-self: center;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: red;
+  visibility: hidden;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.popup-privacy {
   align-self: center;
   text-align: center;
   margin-top: 10px;
@@ -911,7 +926,7 @@ input[type=submit] {
   margin-top: 35px;
 }
 
-.popup-form input[type=email] {
+.popup-email {
   padding: 10px;
   width: 70%;
   border: 1px solid #ccc;
@@ -919,24 +934,38 @@ input[type=submit] {
   font-size: 14px;
 }
 
-.popup-form button[type=submit] {
-  background-color: #007bff;
+.popup-form input[type=submit] {
+  background-color: #08A6E4;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   margin-left: 10px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.popup-form input[type=submit]:hover {
+  transition: 0.3s;
+  color: black;
+  background-color: #0690c6;
 }
 
 .close-button {
   position: absolute;
   top: 10px;
-  right: 20px;
-  font-size: 24px;
+  right: 25px;
+  font-size: 26px;
   font-weight: bold;
   color: #ccc;
   cursor: pointer;
+  transition: 0.2;
+}
+
+.close-button:hover {
+  transform: rotate(90deg);
+  color: black;
+  transition: 0.3s;
 }
 
 footer {

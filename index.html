@@ -44,11 +44,12 @@
                 <li>Receive personalised discounts.</li>
             </ul>
             
-            <form class="popup-form">
-                <input type="email" class="email" id="email" placeholder="Your email address" autocomplete="EMAIL" required>
-                <button type="submit">Subscribe</button>
+            <form class="popup-form" action="" method="POST">
+                <input type="email" class="popup-email" id="email" placeholder="Your email address" autocomplete="EMAIL">
+                <input type="submit" value="Subscribe"></input>
             </form>
-            <p>We value your privacy and will never send irrelevant information.</p>
+            <p class="popup-email-validation">Please enter a valid email</p>
+            <p class="popup-privacy">We value your privacy and will never send irrelevant information.</p>
             <span class="close-button">&times;</span>
         </div>
     </div>
